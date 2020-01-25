@@ -38,7 +38,6 @@ connectors:
 # customCardTemplate: |
 #   {{ define "teams.card" }}
 #   {
-#     
+#
 #   }
 #   {{ end }}
-
