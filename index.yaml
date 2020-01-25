@@ -21,4 +21,25 @@ entries:
     urls:
     - https://github.com/code-chris/helm-charts/releases/download/cadvisor-1.0.0/cadvisor-1.0.0.tgz
     version: 1.0.0
+  prometheus-blackbox-exporter:
+  - apiVersion: v1
+    appVersion: 0.16.0
+    created: "2020-01-25T08:22:52.781973581Z"
+    description: Prometheus Blackbox Exporter
+    digest: ee30a24329fe71d3755574b924a0a577f24279da87d0d37b174905b74ecb77d8
+    home: https://github.com/prometheus/blackbox_exporter
+    keywords:
+    - prometheus
+    - blackbox
+    - monitoring
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: code-chris
+    name: prometheus-blackbox-exporter
+    sources:
+    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/code-chris/helm-charts
+    urls:
+    - https://github.com/code-chris/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
+    version: 1.0.0
 generated: "2020-01-25T08:17:05.703619461Z"
