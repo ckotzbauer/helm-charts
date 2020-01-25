@@ -42,4 +42,26 @@ entries:
     urls:
     - https://github.com/code-chris/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
+  prometheus-msteams:
+  - apiVersion: v1
+    appVersion: 1.1.5
+    created: "2020-01-25T08:29:48.856640479Z"
+    description: Alertmanager Webhook for Microsoft Teams
+    digest: e3ee40bc7e44e7c28d3b114b4e1fc20e3a0975bdc79fe2d829682e31583cf223
+    home: https://github.com/bzon/prometheus-msteams
+    keywords:
+    - prometheus
+    - msteams
+    - webhook
+    - alertmanager
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: code-chris
+    name: prometheus-msteams
+    sources:
+    - https://github.com/bzon/prometheus-msteams
+    - https://github.com/code-chris/helm-charts
+    urls:
+    - https://github.com/code-chris/helm-charts/releases/download/prometheus-msteams-1.0.0/prometheus-msteams-1.0.0.tgz
+    version: 1.0.0
 generated: "2020-01-25T08:17:05.703619461Z"
