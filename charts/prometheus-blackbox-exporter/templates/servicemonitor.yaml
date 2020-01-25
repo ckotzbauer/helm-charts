@@ -1,0 +1,54 @@
+{{- $name := include "prometheus-blackbox-exporter.name" . -}}
+{{- $chart := include "prometheus-blackbox-exporter.chart" . -}}
+{{- $rel := .Release -}}
+{{- range .Values.serviceMonitors }}
+{{-  $monitorName := printf "%s-%s" $name .name -}}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ $monitorName }}
+  labels:
+    app.kubernetes.io/name: {{ $monitorName }}
+    app.kubernetes.io/instance: {{ $rel.Name }}
+    app.kubernetes.io/managed-by: {{ $rel.Service }}
+    helm.sh/chart: {{ $chart }}
+    {{- if .labels }}
+    {{- toYaml .labels | nindent 4 }}
+    {{- end }}
+spec:
+  endpoints:
+  - port: http
+    scheme: http
+    path: "/probe"
+    interval: {{ .interval }}
+    scrapeTimeout: {{ .scrapeTimeout }}
+    params:
+      module:
+      - {{ .module }}
+      target:
+      - {{ .url }}
+    metricRelabelings:
+      - sourceLabels: [__address__]
+        targetLabel: __param_target
+      - sourceLabels: [__param_target]
+        targetLabel: instance
+      - targetLabel: target
+        {{- if .urlHumanReadable }}
+        replacement: {{ .urlHumanReadable }}
+        {{- else }}
+        replacement: {{ .url }}
+        {{- end }}
+      {{- if .removePodLabel }}
+      - targetLabel: pod
+        replacement: ""
+      {{- end }}
+  jobLabel: "{{ $rel.Name }}"
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ $name }}
+      app.kubernetes.io/instance: {{ $rel.Name }}
+  namespaceSelector:
+    matchNames:
+      - {{ $rel.Namespace }}
+---
+{{- end }}
