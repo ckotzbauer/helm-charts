@@ -1,6 +1,6 @@
 image:
   repository: k8s.gcr.io/cadvisor
-  tag: v0.35.0
+  tag: v0.36.0
   pullPolicy: IfNotPresent
 
 container:
