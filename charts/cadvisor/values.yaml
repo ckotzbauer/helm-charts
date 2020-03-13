@@ -56,4 +56,3 @@ affinity: {}
 # This will create a ServiceMonitor Custom Resource indicating the prometheus operator what to scrape.
 metrics:
   enabled: false
-  
