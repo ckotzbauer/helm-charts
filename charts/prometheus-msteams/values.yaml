@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: bzon/prometheus-msteams
-  tag: v1.1.5
+  repository: prometheusmsteams/prometheus-msteams
+  tag: v1.3.3
   pullPolicy: IfNotPresent
 
 extraEnvs:
