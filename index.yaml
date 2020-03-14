@@ -84,6 +84,27 @@ entries:
     version: 1.0.0
   prometheus-msteams:
   - apiVersion: v1
+    appVersion: 1.3.3
+    created: "2020-03-14T11:18:45.29080259Z"
+    description: Alertmanager Webhook for Microsoft Teams
+    digest: d3168ec394e927213246cb0beca87b339a06565658932fe781806e4f28667296
+    home: https://github.com/bzon/prometheus-msteams
+    keywords:
+    - prometheus
+    - msteams
+    - webhook
+    - alertmanager
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: code-chris
+    name: prometheus-msteams
+    sources:
+    - https://github.com/bzon/prometheus-msteams
+    - https://github.com/code-chris/helm-charts
+    urls:
+    - https://github.com/code-chris/helm-charts/releases/download/prometheus-msteams-1.0.1/prometheus-msteams-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
     appVersion: 1.1.5
     created: "2020-01-25T08:29:48.856640479Z"
     description: Alertmanager Webhook for Microsoft Teams
