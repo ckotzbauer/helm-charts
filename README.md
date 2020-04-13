@@ -1,6 +1,6 @@
 # Helm Charts
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/code-chris/helm-charts/Release%20Charts?style=flat-square)
+[![](https://github.com/code-chris/helm-charts/workflows/Release%20Charts/badge.svg?branch=master)](https://github.com/code-chris/helm-charts/actions)
 [![Mergify Status][mergify-status]][mergify]
 
 [mergify]: https://mergify.io
