@@ -17,5 +17,6 @@ helm repo add code-chris https://code-chris.github.io/helm-charts
 ## Charts
 
 - [cadvisor](https://github.com/code-chris/helm-charts/tree/master/charts/cadvisor)
+- [nfs-client-provisioner](https://github.com/code-chris/helm-charts/tree/master/charts/nfs-client-provisioner)
 - [prometheus-blackbox-exporter](https://github.com/code-chris/helm-charts/tree/master/charts/prometheus-blackbox-exporter)
 - [prometheus-msteams](https://github.com/code-chris/helm-charts/tree/master/charts/prometheus-msteams)
