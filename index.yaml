@@ -61,6 +61,27 @@ entries:
     urls:
     - https://github.com/code-chris/helm-charts/releases/download/cadvisor-1.0.0/cadvisor-1.0.0.tgz
     version: 1.0.0
+  nfs-client-provisioner:
+  - apiVersion: v1
+    appVersion: 3.1.0
+    created: "2020-04-13T15:39:47.395534606Z"
+    description: nfs-client is an automatic provisioner that used your *already configured*
+      NFS server, automatically creating Persistent Volumes.
+    digest: 63ed3b319d3f810efec0e016baf9e4a98d7e04be19c01a13c240c15ccb30b4dc
+    home: https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    keywords:
+    - nfs
+    - storage
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: code-chris
+    name: nfs-client-provisioner
+    sources:
+    - https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    - https://github.com/code-chris/helm-charts
+    urls:
+    - https://github.com/code-chris/helm-charts/releases/download/nfs-client-provisioner-1.0.0/nfs-client-provisioner-1.0.0.tgz
+    version: 1.0.0
   prometheus-blackbox-exporter:
   - apiVersion: v1
     appVersion: 0.16.0
