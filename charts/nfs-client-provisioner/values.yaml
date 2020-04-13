@@ -11,9 +11,9 @@ image:
   pullPolicy: IfNotPresent
 
 nfs:
-  server:
+  server: nfs.myserver.com
   path: /ifs/kubernetes
-  mountOptions:
+  mountOptions: {}
 
 # For creating the StorageClass automatically:
 storageClass:
