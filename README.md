@@ -1,6 +1,6 @@
 # Helm Charts
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/code-chris/helm-charts/Release%20Charts?style=flat-square)
+[![](https://github.com/code-chris/helm-charts/workflows/Release%20Charts/badge.svg?branch=master)](https://github.com/code-chris/helm-charts/actions)
 [![Mergify Status][mergify-status]][mergify]
 
 [mergify]: https://mergify.io
@@ -17,5 +17,6 @@ helm repo add code-chris https://code-chris.github.io/helm-charts
 ## Charts
 
 - [cadvisor](https://github.com/code-chris/helm-charts/tree/master/charts/cadvisor)
+- [nfs-client-provisioner](https://github.com/code-chris/helm-charts/tree/master/charts/nfs-client-provisioner)
 - [prometheus-blackbox-exporter](https://github.com/code-chris/helm-charts/tree/master/charts/prometheus-blackbox-exporter)
 - [prometheus-msteams](https://github.com/code-chris/helm-charts/tree/master/charts/prometheus-msteams)
