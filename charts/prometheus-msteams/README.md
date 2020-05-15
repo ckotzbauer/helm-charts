@@ -7,7 +7,7 @@ Learn more: [https://github.com/bzon/prometheus-msteams](https://github.com/bzon
 ## TL;DR;
 
 ```bash
-$ helm install code-chris/prometheus-msteams
+$ helm install ckotzbauer/prometheus-msteams
 ```
 
 ## Introduction
@@ -23,7 +23,7 @@ This chart creates a Webhook deployment on a [Kubernetes](http://kubernetes.io) 
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install --name my-release code-chris/prometheus-msteams
+$ helm install --name my-release ckotzbauer/prometheus-msteams
 ```
 
 The command deploys this Webhook on the Kubernetes cluster using the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -68,14 +68,14 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```bash
 $ helm install --name my-release \
     --set key_1=value_1,key_2=value_2 \
-    code-chris/prometheus-msteams
+    ckotzbauer/prometheus-msteams
 ```
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
 # example for staging
-$ helm install --name my-release -f values.yaml code-chris/prometheus-msteams
+$ helm install --name my-release -f values.yaml ckotzbauer/prometheus-msteams
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)

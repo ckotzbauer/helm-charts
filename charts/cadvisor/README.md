@@ -7,7 +7,7 @@ Learn more: [https://github.com/google/cadvisor](https://github.com/google/cadvi
 ## TL;DR;
 
 ```bash
-$ helm install code-chris/cadvisor
+$ helm install ckotzbauer/cadvisor
 ```
 
 ## Introduction
@@ -23,7 +23,7 @@ This chart creates a daemonset on a [Kubernetes](http://kubernetes.io) cluster u
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install --name my-release code-chris/cadvisor
+$ helm install --name my-release ckotzbauer/cadvisor
 ```
 
 The command deploys the Cadvisor on the Kubernetes cluster using the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -63,14 +63,14 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```bash
 $ helm install --name my-release \
     --set key_1=value_1,key_2=value_2 \
-    code-chris/cadvisor
+    ckotzbauer/cadvisor
 ```
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
 # example for staging
-$ helm install --name my-release -f values.yaml code-chris/cadvisor
+$ helm install --name my-release -f values.yaml ckotzbauer/cadvisor
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)

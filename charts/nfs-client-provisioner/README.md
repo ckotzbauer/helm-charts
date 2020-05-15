@@ -5,7 +5,7 @@ The [NFS client provisioner](https://github.com/kubernetes-incubator/external-st
 ## TL;DR;
 
 ```console
-$ helm install --set nfs.server=x.x.x.x --set nfs.path=/exported/path code-chris/nfs-client-provisioner
+$ helm install --set nfs.server=x.x.x.x --set nfs.path=/exported/path ckotzbauer/nfs-client-provisioner
 ```
 
 For **arm** deployments set `image.repository` to `--set image.repository=quay.io/external_storage/nfs-client-provisioner-arm`
@@ -24,7 +24,7 @@ This charts installs custom [storage class](https://kubernetes.io/docs/concepts/
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release --set nfs.server=x.x.x.x --set nfs.path=/exported/path code-chris/nfs-client-provisioner
+$ helm install --name my-release --set nfs.server=x.x.x.x --set nfs.path=/exported/path ckotzbauer/nfs-client-provisioner
 ```
 
 The command deploys the given storage class in the default configuration. It can be used afterswards to provision persistent volumes. The [configuration](#configuration) section lists the parameters that can be configured during installation.
