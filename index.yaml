@@ -33,13 +33,13 @@ entries:
     - monitoring
     maintainers:
     - email: christian.kotzbauer@gmail.com
-      name: code-chris
+      name: ckotzbauer
     name: cadvisor
     sources:
     - https://github.com/google/cadvisor
-    - https://github.com/code-chris/helm-charts
+    - https://github.com/ckotzbauer/helm-charts
     urls:
-    - https://github.com/code-chris/helm-charts/releases/download/cadvisor-1.1.0/cadvisor-1.1.0.tgz
+    - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-1.1.0/cadvisor-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v1
     appVersion: 0.36.0
@@ -53,13 +53,13 @@ entries:
     - monitoring
     maintainers:
     - email: christian.kotzbauer@gmail.com
-      name: code-chris
+      name: ckotzbauer
     name: cadvisor
     sources:
     - https://github.com/google/cadvisor
-    - https://github.com/code-chris/helm-charts
+    - https://github.com/ckotzbauer/helm-charts
     urls:
-    - https://github.com/code-chris/helm-charts/releases/download/cadvisor-1.0.1/cadvisor-1.0.1.tgz
+    - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-1.0.1/cadvisor-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
     appVersion: 0.35.0
@@ -73,13 +73,13 @@ entries:
     - monitoring
     maintainers:
     - email: christian.kotzbauer@gmail.com
-      name: code-chris
+      name: ckotzbauer
     name: cadvisor
     sources:
     - https://github.com/google/cadvisor
-    - https://github.com/code-chris/helm-charts
+    - https://github.com/ckotzbauer/helm-charts
     urls:
-    - https://github.com/code-chris/helm-charts/releases/download/cadvisor-1.0.0/cadvisor-1.0.0.tgz
+    - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-1.0.0/cadvisor-1.0.0.tgz
     version: 1.0.0
   nfs-client-provisioner:
   - apiVersion: v1
@@ -114,13 +114,13 @@ entries:
     - storage
     maintainers:
     - email: christian.kotzbauer@gmail.com
-      name: code-chris
+      name: ckotzbauer
     name: nfs-client-provisioner
     sources:
     - https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
-    - https://github.com/code-chris/helm-charts
+    - https://github.com/ckotzbauer/helm-charts
     urls:
-    - https://github.com/code-chris/helm-charts/releases/download/nfs-client-provisioner-1.0.0/nfs-client-provisioner-1.0.0.tgz
+    - https://github.com/ckotzbauer/helm-charts/releases/download/nfs-client-provisioner-1.0.0/nfs-client-provisioner-1.0.0.tgz
     version: 1.0.0
   prometheus-blackbox-exporter:
   - apiVersion: v1
@@ -155,13 +155,13 @@ entries:
     - monitoring
     maintainers:
     - email: christian.kotzbauer@gmail.com
-      name: code-chris
+      name: ckotzbauer
     name: prometheus-blackbox-exporter
     sources:
     - https://github.com/prometheus/blackbox_exporter
-    - https://github.com/code-chris/helm-charts
+    - https://github.com/ckotzbauer/helm-charts
     urls:
-    - https://github.com/code-chris/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
+    - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
   prometheus-msteams:
   - apiVersion: v1
@@ -198,13 +198,13 @@ entries:
     - alertmanager
     maintainers:
     - email: christian.kotzbauer@gmail.com
-      name: code-chris
+      name: ckotzbauer
     name: prometheus-msteams
     sources:
     - https://github.com/bzon/prometheus-msteams
-    - https://github.com/code-chris/helm-charts
+    - https://github.com/ckotzbauer/helm-charts
     urls:
-    - https://github.com/code-chris/helm-charts/releases/download/prometheus-msteams-1.0.1/prometheus-msteams-1.0.1.tgz
+    - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-msteams-1.0.1/prometheus-msteams-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.1.5
@@ -219,12 +219,12 @@ entries:
     - alertmanager
     maintainers:
     - email: christian.kotzbauer@gmail.com
-      name: code-chris
+      name: ckotzbauer
     name: prometheus-msteams
     sources:
     - https://github.com/bzon/prometheus-msteams
-    - https://github.com/code-chris/helm-charts
+    - https://github.com/ckotzbauer/helm-charts
     urls:
-    - https://github.com/code-chris/helm-charts/releases/download/prometheus-msteams-1.0.0/prometheus-msteams-1.0.0.tgz
+    - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-msteams-1.0.0/prometheus-msteams-1.0.0.tgz
     version: 1.0.0
 generated: "2020-01-25T08:17:05.703619461Z"
