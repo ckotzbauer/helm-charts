@@ -12,7 +12,5 @@ keywords:
   - msteams
   - webhook
   - alertmanager
-maintainers:
-  - name: ckotzbauer
-    email: christian.kotzbauer@gmail.com
+maintainers: []
 deprecated: true
