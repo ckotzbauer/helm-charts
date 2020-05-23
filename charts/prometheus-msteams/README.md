@@ -1,5 +1,7 @@
 # Prometheus MSTeams
 
+## This chart is deprecated in favour of the [official helm-chart](https://hub.helm.sh/charts/prometheus-msteams/prometheus-msteams).
+
 Alertmanager Webhook for Microsoft Teams
 
 Learn more: [https://github.com/bzon/prometheus-msteams](https://github.com/bzon/prometheus-msteams)
