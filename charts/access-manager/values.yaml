@@ -1,0 +1,37 @@
+# Default values for access-manager.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: ckotzbauer/access-manager
+  tag: 0.1.0
+  pullPolicy: IfNotPresent
+
+podAnnotations: {}
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 128Mi
+  limits:
+    cpu: 50m
+    memory: 128Mi
+
+securityContext:
+  privileged: false
+  runAsUser: 1001
+  runAsNonRoot: false
+
+serviceAccount:
+  # Specifies whether a ServiceAccount should be created
+  create: true
+
+  # The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
