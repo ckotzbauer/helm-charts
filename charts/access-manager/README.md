@@ -35,12 +35,12 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following table lists the configurable parameters of the Prometheus MSTeams chart and their default values.
+The following table lists the configurable parameters of the Access-Manager chart and their default values.
 
 |               Parameter                |                    Description                    |            Default            |
 | -------------------------------------- | ------------------------------------------------- | ----------------------------- |
 | `image.repository`                     | container image repository                        | `ckotzbauer/access-manager`   |
-| `image.tag`                            | container image tag                               | `0.1.0`                       |
+| `image.tag`                            | container image tag                               | `0.2.0`                       |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                |
 | `nodeSelector`                         | node labels for pod assignment                    | `{}`                          |
 | `tolerations`                          | node tolerations for pod assignment               | `[]`                          |
