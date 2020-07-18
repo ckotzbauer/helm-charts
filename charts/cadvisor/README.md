@@ -55,6 +55,7 @@ The following table lists the configurable parameters of the Prometheus MSTeams 
 | `resources`                | pod resource requests & limits                   | `{}`                  |
 | `serviceAccount.create`    | create a own serviceAccount for the pod          | `true`                |
 | `serviceAccount.name`      | name of the serviceAccount to create             | `""`                  |
+| `podAnnotations`           | annotations for the daemonset pods               | `{}`                  |
 | `podSecurityPolicy.create` | create a own PodSecurityPolicy for the pod       | `false`               |
 | `metrics.enabled`          | create ServiceMonitor CR for Prometheus operator | `false`               |
 
