@@ -16,6 +16,7 @@ helm repo add ckotzbauer https://ckotzbauer.github.io/helm-charts
 
 ## Charts
 
+- [access-manager](https://github.com/ckotzbauer/helm-charts/tree/master/charts/access-manager)
 - [cadvisor](https://github.com/ckotzbauer/helm-charts/tree/master/charts/cadvisor)
 - [nfs-client-provisioner](https://github.com/ckotzbauer/helm-charts/tree/master/charts/nfs-client-provisioner)
 - [prometheus-blackbox-exporter](https://github.com/ckotzbauer/helm-charts/tree/master/charts/prometheus-blackbox-exporter)
