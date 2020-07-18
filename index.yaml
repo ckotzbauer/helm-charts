@@ -2,6 +2,26 @@ apiVersion: v1
 entries:
   access-manager:
   - apiVersion: v1
+    appVersion: 0.2.0
+    created: "2020-07-18T10:36:24.677132496Z"
+    description: Kubernetes-Operator to simplify RBAC configurations
+    digest: 804ab6169962ec1f5a4c523cfe1a36f43d79532fe84e43b2ae78598e0c5f4861
+    home: https://github.com/ckotzbauer/access-manager
+    keywords:
+    - kubernetes-operator
+    - operator
+    - rbac
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: access-manager
+    sources:
+    - https://github.com/ckotzbauer/access-manager
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/access-manager-0.2.0/access-manager-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
     appVersion: 0.1.0
     created: "2020-06-11T11:12:20.524614604Z"
     description: Kubernetes-Operator to simplify RBAC configurations
