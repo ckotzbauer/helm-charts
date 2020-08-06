@@ -25,6 +25,9 @@ spec:
         {{- end }}
     spec:
       serviceAccountName: {{ template "cadvisor.serviceAccountName" . }}
+      {{ if .Values.hostNetwork }} 
+      hostNetwork: true
+      {{- end }}
       containers:
       - name: {{ template "cadvisor.name" . }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

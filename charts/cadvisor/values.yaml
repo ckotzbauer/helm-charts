@@ -39,6 +39,9 @@ resources: {}
 
 podAnnotations: {}
 
+# sometimes errors are encountered when using the cpu load reader without being on the host network
+hostNetwork: false
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
