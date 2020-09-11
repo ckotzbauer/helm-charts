@@ -1,6 +1,11 @@
+
+---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.4.0
+  creationTimestamp: null
   name: rbacdefinitions.access-manager.io
 spec:
   group: access-manager.io
@@ -30,77 +35,167 @@ spec:
             type: object
           spec:
             description: RbacDefinitionSpec defines the desired state of RbacDefinition
-            type: object
             properties:
-              paused:
-                type: boolean
-              namespaced:
-                description: Defines the desired state of RoleBindings
-                type: array
+              cluster:
                 items:
-                  type: object
                   properties:
-                    namespace:
-                      type: object
-                      properties:
-                        name:
-                          type: string
-                    namespaceSelector:
-                      type: object
-                      properties:
-                        matchLabels:
-                          type: object
-                          x-kubernetes-preserve-unknown-fields: true
-                        matchExpressions:
-                          type: array
-                          items:
-                            type: object
-                            x-kubernetes-preserve-unknown-fields: true
-                    bindings:
-                      type: array
+                    clusterRoleName:
+                      type: string
+                    name:
+                      type: string
+                    subjects:
                       items:
-                        type: object
+                        description: Subject contains a reference to the object or
+                          user identities a role binding applies to.  This can either
+                          hold a direct API object reference, or a value for non-objects
+                          such as user and group names.
                         properties:
+                          apiGroup:
+                            description: APIGroup holds the API group of the referenced
+                              subject. Defaults to "" for ServiceAccount subjects.
+                              Defaults to "rbac.authorization.k8s.io" for User and
+                              Group subjects.
+                            type: string
+                          kind:
+                            description: Kind of object being referenced. Values defined
+                              by this API group are "User", "Group", and "ServiceAccount".
+                              If the Authorizer does not recognized the kind value,
+                              the Authorizer should report an error.
+                            type: string
+                          name:
+                            description: Name of the object being referenced.
+                            type: string
+                          namespace:
+                            description: Namespace of the referenced object.  If the
+                              object kind is non-namespace, such as "User" or "Group",
+                              and this value is not empty the Authorizer should report
+                              an error.
+                            type: string
+                        required:
+                        - kind
+                        - name
+                        type: object
+                      type: array
+                  required:
+                  - clusterRoleName
+                  - name
+                  - subjects
+                  type: object
+                type: array
+              namespaced:
+                items:
+                  properties:
+                    bindings:
+                      items:
+                        properties:
+                          kind:
+                            type: string
                           name:
                             type: string
                           roleName:
                             type: string
-                          kind:
-                            type: string
                           subjects:
-                            type: array
                             items:
-                              type: object
+                              description: Subject contains a reference to the object
+                                or user identities a role binding applies to.  This
+                                can either hold a direct API object reference, or
+                                a value for non-objects such as user and group names.
                               properties:
-                                name:
+                                apiGroup:
+                                  description: APIGroup holds the API group of the
+                                    referenced subject. Defaults to "" for ServiceAccount
+                                    subjects. Defaults to "rbac.authorization.k8s.io"
+                                    for User and Group subjects.
                                   type: string
                                 kind:
+                                  description: Kind of object being referenced. Values
+                                    defined by this API group are "User", "Group",
+                                    and "ServiceAccount". If the Authorizer does not
+                                    recognized the kind value, the Authorizer should
+                                    report an error.
+                                  type: string
+                                name:
+                                  description: Name of the object being referenced.
                                   type: string
                                 namespace:
+                                  description: Namespace of the referenced object.  If
+                                    the object kind is non-namespace, such as "User"
+                                    or "Group", and this value is not empty the Authorizer
+                                    should report an error.
                                   type: string
-
-              cluster:
-                description: Defines the desired state of ClusterRoleBindings
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                    clusterRoleName:
-                      type: string
-                    subjects:
-                      type: array
-                      items:
+                              required:
+                              - kind
+                              - name
+                              type: object
+                            type: array
+                        required:
+                        - kind
+                        - name
+                        - roleName
+                        - subjects
                         type: object
-                        properties:
-                          name:
+                      type: array
+                    namespace:
+                      properties:
+                        name:
+                          type: string
+                      required:
+                      - name
+                      type: object
+                    namespaceSelector:
+                      description: A label selector is a label query over a set of
+                        resources. The result of matchLabels and matchExpressions
+                        are ANDed. An empty label selector matches all objects. A
+                        null label selector matches no objects.
+                      properties:
+                        matchExpressions:
+                          description: matchExpressions is a list of label selector
+                            requirements. The requirements are ANDed.
+                          items:
+                            description: A label selector requirement is a selector
+                              that contains values, a key, and an operator that relates
+                              the key and values.
+                            properties:
+                              key:
+                                description: key is the label key that the selector
+                                  applies to.
+                                type: string
+                              operator:
+                                description: operator represents a key's relationship
+                                  to a set of values. Valid operators are In, NotIn,
+                                  Exists and DoesNotExist.
+                                type: string
+                              values:
+                                description: values is an array of string values.
+                                  If the operator is In or NotIn, the values array
+                                  must be non-empty. If the operator is Exists or
+                                  DoesNotExist, the values array must be empty. This
+                                  array is replaced during a strategic merge patch.
+                                items:
+                                  type: string
+                                type: array
+                            required:
+                            - key
+                            - operator
+                            type: object
+                          type: array
+                        matchLabels:
+                          additionalProperties:
                             type: string
-                          kind:
-                            type: string
-                          namespace:
-                            type: string
-
+                          description: matchLabels is a map of {key,value} pairs.
+                            A single {key,value} in the matchLabels map is equivalent
+                            to an element of matchExpressions, whose key field is
+                            "key", the operator is "In", and the values array contains
+                            only "value". The requirements are ANDed.
+                          type: object
+                      type: object
+                  required:
+                  - bindings
+                  type: object
+                type: array
+              paused:
+                type: boolean
+            type: object
           status:
             description: RbacDefinitionStatus defines the observed state of RbacDefinition
             type: object
@@ -109,3 +204,9 @@ spec:
     storage: true
     subresources:
       status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
