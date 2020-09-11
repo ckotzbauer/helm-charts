@@ -1,7 +1,6 @@
 # Helm Charts
 
 [![](https://github.com/ckotzbauer/helm-charts/workflows/Release%20Charts/badge.svg?branch=master)](https://github.com/ckotzbauer/helm-charts/actions)
-[![Mergify Status][mergify-status]][mergify]
 
 [mergify]: https://mergify.io
 [mergify-status]: https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/ckotzbauer/helm-charts&style=flat-square
