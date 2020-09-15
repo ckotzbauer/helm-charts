@@ -24,6 +24,12 @@ spec:
         {{ $key }}: {{ $value | quote }}
         {{- end }}
     spec:
+      {{ if .Values.image.pullSecrets }}
+      imagePullSecrets:
+      {{- range .Values.image.pullSecrets }}
+      - name: {{ . }}
+      {{-end }}
+      {{-end }}
       serviceAccountName: {{ template "cadvisor.serviceAccountName" . }}
       {{ if .Values.hostNetwork }} 
       hostNetwork: true
