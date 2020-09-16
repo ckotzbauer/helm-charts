@@ -28,8 +28,8 @@ spec:
       imagePullSecrets:
       {{- range .Values.image.pullSecrets }}
       - name: {{ . }}
-      {{-end }}
-      {{-end }}
+      {{- end }}
+      {{- end }}
       serviceAccountName: {{ template "cadvisor.serviceAccountName" . }}
       {{ if .Values.hostNetwork }} 
       hostNetwork: true
