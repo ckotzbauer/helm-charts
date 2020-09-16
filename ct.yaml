@@ -3,4 +3,3 @@ remote: origin
 chart-dirs:
   - charts
 chart-repos: []
-helm-extra-args: --timeout 600
