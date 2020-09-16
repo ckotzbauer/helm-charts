@@ -1,6 +1,6 @@
-# Cadvisor
+# cAdvisor
 
-A chart for a Cadvisor deployment
+A chart for a cAdvisor deployment
 
 Learn more: [https://github.com/google/cadvisor](https://github.com/google/cadvisor)
 
