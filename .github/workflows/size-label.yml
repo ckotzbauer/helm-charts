@@ -8,3 +8,4 @@ jobs:
         uses: "pascalgn/size-label-action@3de5b9af54686db1856cf445e22715dc92f259de"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          IGNORED: ".*\npackage-lock.json\ndist/**"

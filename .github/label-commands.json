@@ -1,7 +1,5 @@
 {
     "commands": [
-        { "command": "approved", "arg": "", "action": "add-label", "label": "approved", "dispatch": "approved" },
-        { "command": "approved", "arg": "cancel", "action": "remove-label", "label": "approved" },
         { "command": "hold", "arg": "", "action": "add-label", "label": "hold" },
         { "command": "hold", "arg": "cancel", "action": "remove-label", "label": "hold" },
         { "command": "label", "arg": "(.*)", "action": "add-label", "label": "$1" },
