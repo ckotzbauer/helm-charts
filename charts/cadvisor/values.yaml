@@ -1,6 +1,6 @@
 image:
   repository: k8s.gcr.io/cadvisor
-  tag: v0.36.0
+  tag: v0.37.0
   pullPolicy: IfNotPresent
 
   ## Reference to one or more secrets to be used when pulling images
@@ -56,6 +56,7 @@ serviceAccount:
 
 podSecurityPolicy:
   create: false
+  privileged: false
 
 nodeSelector: {}
 

@@ -41,24 +41,25 @@ The command removes all the Kubernetes components associated with the chart and 
 
 The following table lists the configurable parameters of the Prometheus MSTeams chart and their default values.
 
-| Parameter                  | Description                                      | Default               |
-| -------------------------- | ------------------------------------------------ | --------------------- |
-| `image.repository`         | container image repository                       | `k8s.gcr.io/cadvisor` |
-| `image.tag`                | container image tag                              | `v0.36.0`             |
-| `image.pullPolicy`         | container image pull policy                      | `IfNotPresent`        |
-| `image.pullSecrets`        | container image pull secrets                     | `[]`                  |
-| `nodeSelector`             | node labels for pod assignment                   | `{}`                  |
-| `tolerations`              | node tolerations for pod assignment              | `[]`                  |
-| `affinity`                 | node affinity for pod assignment                 | `{}`                  |
-| `container.port`           | the container and service port to use            | 8080                  |
-| `container.additionalArgs` | additional container arguments                   | see values.yaml       |
-| `container.hostPaths`      | hostPaths to mount in the container              | see values.yaml       |
-| `resources`                | pod resource requests & limits                   | `{}`                  |
-| `serviceAccount.create`    | create a own serviceAccount for the pod          | `true`                |
-| `serviceAccount.name`      | name of the serviceAccount to create             | `""`                  |
-| `podAnnotations`           | annotations for the daemonset pods               | `{}`                  |
-| `podSecurityPolicy.create` | create a own PodSecurityPolicy for the pod       | `false`               |
-| `metrics.enabled`          | create ServiceMonitor CR for Prometheus operator | `false`               |
+| Parameter                      | Description                                      | Default               |
+| ------------------------------ | ------------------------------------------------ | --------------------- |
+| `image.repository`             | container image repository                       | `k8s.gcr.io/cadvisor` |
+| `image.tag`                    | container image tag                              | `v0.37.0`             |
+| `image.pullPolicy`             | container image pull policy                      | `IfNotPresent`        |
+| `image.pullSecrets`            | container image pull secrets                     | `[]`                  |
+| `nodeSelector`                 | node labels for pod assignment                   | `{}`                  |
+| `tolerations`                  | node tolerations for pod assignment              | `[]`                  |
+| `affinity`                     | node affinity for pod assignment                 | `{}`                  |
+| `container.port`               | the container and service port to use            | 8080                  |
+| `container.additionalArgs`     | additional container arguments                   | see values.yaml       |
+| `container.hostPaths`          | hostPaths to mount in the container              | see values.yaml       |
+| `resources`                    | pod resource requests & limits                   | `{}`                  |
+| `serviceAccount.create`        | create a own serviceAccount for the pod          | `true`                |
+| `serviceAccount.name`          | name of the serviceAccount to create             | `""`                  |
+| `podAnnotations`               | annotations for the daemonset pods               | `{}`                  |
+| `podSecurityPolicy.create`     | create a own PodSecurityPolicy for the pod       | `false`               |
+| `podSecurityPolicy.privileged` | create the PodSecurityPolicy as privileged       | `false`               |
+| `metrics.enabled`              | create ServiceMonitor CR for Prometheus operator | `false`               |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
