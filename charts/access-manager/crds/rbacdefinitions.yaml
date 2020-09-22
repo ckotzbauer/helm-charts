@@ -88,6 +88,9 @@ spec:
                     bindings:
                       items:
                         properties:
+                          allServiceAccounts:
+                            default: false
+                            type: boolean
                           kind:
                             type: string
                           name:
