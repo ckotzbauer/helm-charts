@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: size-label
-        uses: "pascalgn/size-label-action@3de5b9af54686db1856cf445e22715dc92f259de"
+        uses: "pascalgn/size-label-action@9df9e5d3e376d74ac734cc86a83a04f12ab457e7"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           IGNORED: ".*\npackage-lock.json\ndist/**"
