@@ -4,7 +4,7 @@
 
 image:
   repository: ckotzbauer/access-manager
-  tag: 0.4.0
+  tag: 0.4.1
   pullPolicy: IfNotPresent
 
 podAnnotations: {}

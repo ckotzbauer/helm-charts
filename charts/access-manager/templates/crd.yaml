@@ -94,6 +94,7 @@ spec:
                           kind:
                             type: string
                           name:
+                            default: ""
                             type: string
                           roleName:
                             type: string
@@ -133,9 +134,7 @@ spec:
                             type: array
                         required:
                         - kind
-                        - name
                         - roleName
-                        - subjects
                         type: object
                       type: array
                     namespace:
