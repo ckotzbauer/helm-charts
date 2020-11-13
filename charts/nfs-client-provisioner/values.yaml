@@ -39,6 +39,9 @@ storageClass:
   # When set to false your PVs will not be archived by the provisioner upon deletion of the PVC.
   archiveOnDelete: true
 
+  # Set access mode - ReadWriteOnce, ReadOnlyMany or ReadWriteMany
+  accessModes: ReadWriteOnce
+
 ## For RBAC support:
 rbac:
   # Specifies whether RBAC resources should be created
@@ -60,7 +63,8 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name:
 
-resources: {}
+resources:
+  {}
   # limits:
   #  cpu: 100m
   #  memory: 128Mi
