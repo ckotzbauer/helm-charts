@@ -1,6 +1,6 @@
 image:
-  repository: k8s.gcr.io/cadvisor
-  tag: v0.37.0
+  repository: gcr.io/cadvisor/cadvisor
+  tag: v0.38.4
   pullPolicy: IfNotPresent
 
   ## Reference to one or more secrets to be used when pulling images
