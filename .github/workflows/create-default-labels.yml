@@ -1,5 +1,10 @@
 name: Create default labels
-on: issues
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - ".github/labels.json"
 jobs:
   labels:
     name: DefaultLabelsActions
