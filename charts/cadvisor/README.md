@@ -44,7 +44,7 @@ The following table lists the configurable parameters of the Prometheus MSTeams 
 | Parameter                      | Description                                      | Default                    |
 | ------------------------------ | ------------------------------------------------ | -------------------------- |
 | `image.repository`             | container image repository                       | `gcr.io/cadvisor/cadvisor` |
-| `image.tag`                    | container image tag                              | `v0.38.4`                  |
+| `image.tag`                    | container image tag                              | `v0.38.6`                  |
 | `image.pullPolicy`             | container image pull policy                      | `IfNotPresent`             |
 | `image.pullSecrets`            | container image pull secrets                     | `[]`                       |
 | `nodeSelector`                 | node labels for pod assignment                   | `{}`                       |
