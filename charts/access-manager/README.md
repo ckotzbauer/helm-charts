@@ -1,6 +1,6 @@
 # Access-Manager
 
-Kubernetes-Operator to simplify RBAC configurations.
+Kubernetes-Operator to simplify RBAC configurations and spread secrets across namespaces.
 
 Learn more: [https://github.com/ckotzbauer/access-manager](https://github.com/ckotzbauer/access-manager)
 
@@ -41,7 +41,7 @@ The following table lists the configurable parameters of the Access-Manager char
 |               Parameter                |                    Description                    |            Default            |
 | -------------------------------------- | ------------------------------------------------- | ----------------------------- |
 | `image.repository`                     | container image repository                        | `ckotzbauer/access-manager`   |
-| `image.tag`                            | container image tag                               | `0.4.1`                       |
+| `image.tag`                            | container image tag                               | `0.5.0`                       |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                |
 | `nodeSelector`                         | node labels for pod assignment                    | `{}`                          |
 | `tolerations`                          | node tolerations for pod assignment               | `[]`                          |
