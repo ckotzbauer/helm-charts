@@ -7,9 +7,9 @@ image:
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
   ##
   pullSecrets: []
-
 container:
   port: 8080
+  hostPort: 8080
   additionalArgs:
     - --housekeeping_interval=10s                       # kubernetes default args
     - --max_housekeeping_interval=15s
@@ -46,6 +46,9 @@ podAnnotations: {}
 
 # sometimes errors are encountered when using the cpu load reader without being on the host network
 hostNetwork: false
+
+service:
+  create: false
 
 serviceAccount:
   # Specifies whether a service account should be created

@@ -51,6 +51,12 @@ spec:
         ports:
         - name: http
           containerPort: {{ .Values.container.port }}
+          {{- if .Values.container.hostPort }}
+          hostPort: {{ .Values.container.hostPort }}
+          {{- end }}
+          {{- if .Values.container.hostIP }}
+          hostIP: {{ .Values.container.hostIP }}
+          {{- end }}
           protocol: TCP
         resources:
 {{ toYaml .Values.resources | indent 10 }}
@@ -74,4 +80,3 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
-
