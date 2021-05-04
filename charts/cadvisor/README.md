@@ -60,6 +60,7 @@ The following table lists the configurable parameters of the cAdvisor chart and 
 | `podSecurityPolicy.create`     | create a own PodSecurityPolicy for the pod       | `false`                    |
 | `podSecurityPolicy.privileged` | create the PodSecurityPolicy as privileged       | `false`                    |
 | `metrics.enabled`              | create ServiceMonitor CR for Prometheus operator | `false`                    |
+| `metrics.relabeling`           | add relabeling configuration to ServiceMonitor   | `[]`                       |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
