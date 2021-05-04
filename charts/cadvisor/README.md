@@ -1,6 +1,6 @@
-# Cadvisor
+# cAdvisor
 
-A chart for a Cadvisor deployment
+A chart for a cAdvisor deployment
 
 Learn more: [https://github.com/google/cadvisor](https://github.com/google/cadvisor)
 
@@ -26,7 +26,7 @@ To install the chart with the release name `my-release`:
 $ helm install --name my-release ckotzbauer/cadvisor
 ```
 
-The command deploys the Cadvisor on the Kubernetes cluster using the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
+The command deploys cAdvisor on the Kubernetes cluster using the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
 ## Uninstalling the Chart
 
@@ -39,7 +39,7 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following table lists the configurable parameters of the Prometheus MSTeams chart and their default values.
+The following table lists the configurable parameters of the cAdvisor chart and their default values.
 
 | Parameter                      | Description                                      | Default                    |
 | ------------------------------ | ------------------------------------------------ | -------------------------- |
