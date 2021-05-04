@@ -19,4 +19,8 @@ spec:
   endpoints:
     - path: /metrics
       port: http
+      {{- if .Values.metrics.relabelings }}
+      metricRelabelings:
+        {{- toYaml .Values.metrics.relabelings | nindent 8 }}
+      {{- end -}}
 {{- end -}}
