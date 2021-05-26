@@ -20,7 +20,7 @@ spec:
         release: {{ .Release.Name }}
     {{- if .Values.podAnnotations }}
       annotations:
-    {{ toYaml .Values.podAnnotations | indent 8 }}
+{{ toYaml .Values.podAnnotations | indent 8 }}
     {{- end }}
     spec:
       serviceAccountName: {{ template "app.serviceAccountName" . }}
