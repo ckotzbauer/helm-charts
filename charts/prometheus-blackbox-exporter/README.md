@@ -49,7 +49,7 @@ The following table lists the configurable parameters of the Blackbox-Exporter c
 | `extraConfigmapMounts`                 | Additional configmap mounts                       | `[]`                          |
 | `extraSecretMounts`                    | Additional secret mounts                          | `[]`                          |
 | `image.repository`                     | container image repository                        | `prom/blackbox-exporter`      |
-| `image.tag`                            | container image tag                               | `v0.18.0`                     |
+| `image.tag`                            | container image tag                               | `v0.19.0`                     |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                |
 | `image.pullSecrets`                    | container image pull secrets                      | `[]`                          |
 | `ingress.annotations`                  | Ingress annotations                               | None                          |
