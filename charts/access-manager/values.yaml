@@ -20,7 +20,7 @@ resources:
 securityContext:
   privileged: false
   runAsUser: 1001
-  runAsNonRoot: false
+  runAsNonRoot: true
 
 serviceAccount:
   # Specifies whether a ServiceAccount should be created

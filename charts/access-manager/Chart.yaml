@@ -1,7 +1,7 @@
 apiVersion: v1
 description: Kubernetes-Operator to simplify RBAC configurations
 name: access-manager
-version: 0.5.2
+version: 0.5.3
 appVersion: 0.5.1
 home: https://github.com/ckotzbauer/access-manager
 sources:
