@@ -489,6 +489,26 @@ entries:
     version: 1.0.0
   prometheus-blackbox-exporter:
   - apiVersion: v1
+    appVersion: 0.19.0
+    created: "2021-05-31T17:13:25.96069627Z"
+    description: Prometheus Blackbox Exporter
+    digest: afbfb633da9d7456de4ab8cf9f1a992f72366153438c0085965a86308fa4c2f6
+    home: https://github.com/prometheus/blackbox_exporter
+    keywords:
+    - prometheus
+    - blackbox
+    - monitoring
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: prometheus-blackbox-exporter
+    sources:
+    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.4/prometheus-blackbox-exporter-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
     appVersion: 0.18.0
     created: "2020-11-01T18:44:47.455627758Z"
     description: Prometheus Blackbox Exporter
@@ -568,4 +588,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-05-31T17:10:17.828793065Z"
+generated: "2021-05-31T17:13:25.960769969Z"
