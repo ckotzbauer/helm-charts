@@ -38,19 +38,19 @@ The command removes all the Kubernetes components associated with the chart and 
 
 The following table lists the configurable parameters of the Access-Manager chart and their default values.
 
-|               Parameter                |                    Description                    |            Default            |
-| -------------------------------------- | ------------------------------------------------- | ----------------------------- |
-| `image.repository`                     | container image repository                        | `ckotzbauer/access-manager`   |
-| `image.tag`                            | container image tag                               | `0.5.1`                       |
-| `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                |
-| `nodeSelector`                         | node labels for pod assignment                    | `{}`                          |
-| `tolerations`                          | node tolerations for pod assignment               | `[]`                          |
-| `affinity`                             | node affinity for pod assignment                  | `{}`                          |
-| `podAnnotations`                       | annotations to add to each pod                    | `{}`                          |
-| `resources`                            | pod resource requests & limits                    | See [values.yaml](values.yaml)|
-| `securityContext`                      | container securityContext                         | See [values.yaml](values.yaml)|
-| `serviceAccount.create`	             | Should we create a ServiceAccount	             | `true`                        |
-| `serviceAccount.name`		             | Name of the ServiceAccount to use                 | null                          |
+|               Parameter                |                    Description                    |            Default                    |
+| -------------------------------------- | ------------------------------------------------- | ------------------------------------- |
+| `image.repository`                     | container image repository                        | `ghcr.io/ckotzbauer/access-manager`   |
+| `image.tag`                            | container image tag                               | `0.6.0`                               |
+| `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                        |
+| `nodeSelector`                         | node labels for pod assignment                    | `{}`                                  |
+| `tolerations`                          | node tolerations for pod assignment               | `[]`                                  |
+| `affinity`                             | node affinity for pod assignment                  | `{}`                                  |
+| `podAnnotations`                       | annotations to add to each pod                    | `{}`                                  |
+| `resources`                            | pod resource requests & limits                    | See [values.yaml](values.yaml)        |
+| `securityContext`                      | container securityContext                         | See [values.yaml](values.yaml)        |
+| `serviceAccount.create`	             | Should we create a ServiceAccount	             | `true`                                |
+| `serviceAccount.name`		             | Name of the ServiceAccount to use                 | null                                  |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
