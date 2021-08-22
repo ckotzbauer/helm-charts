@@ -4,7 +4,7 @@
 
 image:
   repository: ghcr.io/ckotzbauer/access-manager
-  tag: 0.6.0
+  tag: 0.7.0
   pullPolicy: IfNotPresent
 
 podAnnotations: {}
