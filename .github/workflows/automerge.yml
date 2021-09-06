@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: automerge
-        uses: "pascalgn/automerge-action@01fb84a9d077930bf9d16d1f7fa3fe2ffe45aabe"
+        uses: "pascalgn/automerge-action@04dfc9eae2586d19b7362d4f6413c48135d9c25a"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_LABELS: "approved,!work-in-progress,!hold"
