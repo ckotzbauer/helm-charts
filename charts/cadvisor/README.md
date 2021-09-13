@@ -59,6 +59,8 @@ The following table lists the configurable parameters of the cAdvisor chart and 
 | `podAnnotations`               | annotations for the daemonset pods               | `{}`                       |
 | `podSecurityPolicy.create`     | create a own PodSecurityPolicy for the pod       | `false`                    |
 | `podSecurityPolicy.privileged` | create the PodSecurityPolicy as privileged       | `false`                    |
+| `podSecurityContext.create`    | create the podSecurityContext in container spec  | `false`                    |
+| `podSecurityContext.privileged`| set podSecurityContext privileged to true        | `false`                    |
 | `metrics.enabled`              | create ServiceMonitor CR for Prometheus operator | `false`                    |
 | `metrics.relabeling`           | add relabeling configuration to ServiceMonitor   | `[]`                       |
 
