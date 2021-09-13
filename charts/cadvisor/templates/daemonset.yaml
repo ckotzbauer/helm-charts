@@ -48,6 +48,10 @@ spec:
           mountPath: {{ default .path .mount }}
           readOnly: true
         {{- end }}
+        {{ if .Values.podSecurityContext.create }}
+        securityContext:
+          privileged: {{ .Values.podSecurityContext.privileged }}
+        {{- end }}
         ports:
         - name: http
           containerPort: {{ .Values.container.port }}

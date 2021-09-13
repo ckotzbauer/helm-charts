@@ -58,6 +58,11 @@ podSecurityPolicy:
   create: false
   privileged: false
 
+# Specifies whether a securityContext should be created. Required for privileged operations.
+podSecurityContext:
+  create: false
+  privileged: false
+
 nodeSelector: {}
 
 tolerations: []
