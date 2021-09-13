@@ -230,6 +230,26 @@ entries:
   cadvisor:
   - apiVersion: v1
     appVersion: 0.39.2
+    created: "2021-09-13T13:31:52.049211599Z"
+    description: A chart for a Cadvisor deployment
+    digest: 675021a910670144f057d93207d03d7255d5434f9b28aa33cc04213deea93551
+    home: https://github.com/google/cadvisor
+    keywords:
+    - prometheus
+    - cadvisor
+    - monitoring
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: cadvisor
+    sources:
+    - https://github.com/google/cadvisor
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-1.3.0/cadvisor-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v1
+    appVersion: 0.39.2
     created: "2021-05-31T17:10:17.821226655Z"
     description: A chart for a Cadvisor deployment
     digest: 4222885ce220edfd373a2ab8cca4444c6cd953d85232e20faf75ba606883736d
@@ -630,4 +650,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-08-22T10:29:03.267111013Z"
+generated: "2021-09-13T13:31:52.0493921Z"
