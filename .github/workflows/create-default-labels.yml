@@ -2,7 +2,7 @@ name: Create default labels
 on:
   push:
     branches:
-      - "master"
+      - "main"
     paths:
       - ".github/labels.json"
 jobs:
