@@ -33,14 +33,6 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-          #livenessProbe:
-          #  httpGet:
-          #    path: /
-          #    port: http
-          #readinessProbe:
-          #  httpGet:
-          #    path: /
-          #    port: http
           resources:
             {{- toYaml .Values.webserver.resources | nindent 12 }}
           volumeMounts:
