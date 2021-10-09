@@ -6,7 +6,7 @@ metadata:
     {{- include "chekr.labels" . | nindent 4 }}
 spec:
   accessModes:
-    - ReadWriteMany
+    - {{ .Values.persistence.accessMode | default "ReadWriteMany" }}
   volumeMode: Filesystem
   resources:
     requests:
