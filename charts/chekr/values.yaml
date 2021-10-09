@@ -21,7 +21,8 @@ securityContext:
 
 # Storage to store and serve report files (mandatory).
 persistence:
-  storageClass: "-" # Storage-Class to use. RWX capability is required.
+  # Storage-Class to use. RWX capability is required.
+  storageClass: "-"
   size: 256Mi
 
 webserver:
