@@ -4,3 +4,16 @@ description: A inspection utility for the maintenance of Kubernetes clusters.
 type: application
 version: 0.5.0
 appVersion: 0.5.0
+home: https://github.com/ckotzbauer/chekr
+sources:
+  - https://github.com/ckotzbauer/chekr
+  - https://github.com/ckotzbauer/helm-charts
+keywords:
+  - prometheus
+  - kubernetes
+  - cli
+  - maintenance
+  - clusters
+maintainers:
+  - name: ckotzbauer
+    email: christian.kotzbauer@gmail.com
