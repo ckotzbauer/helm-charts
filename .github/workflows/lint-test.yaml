@@ -23,7 +23,7 @@ jobs:
       - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.1.0
 
-      - run: ct list-changed --print-config
+      - run: ct list-changed --print-config --target-branch main
 
       - name: Run chart-testing (list-changed)
         id: list-changed
