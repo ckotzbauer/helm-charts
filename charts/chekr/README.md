@@ -39,10 +39,9 @@ The following table lists the configurable parameters of the Chekr chart and the
 
 |               Parameter                |                    Description                    |            Default                    |
 | -------------------------------------- | ------------------------------------------------- | ------------------------------------- |
-imagePullPolicies
-nameOverride
-fullnameOverride
-
+| `imagePullSecrets`                     | Pull-Secrets to use for each pod                  | `[]`                                  |
+| `nameOverride`                         | Name-Override                                     | `""`                                  |
+| `fullnameOverride`                     | FullName-Override                                 | `""`                                  |
 | `webserver.image.repository`           | container image repository                        | `nginxinc/nginx-unprivileged`         |
 | `webserver.image.tag`                  | container image tag                               | `mainline-alpine`                     |
 | `webserver.image.pullPolicy`           | container image pull policy                       | `IfNotPresent`                        |
