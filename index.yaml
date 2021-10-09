@@ -488,6 +488,30 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-1.0.0/cadvisor-1.0.0.tgz
     version: 1.0.0
+  chekr:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2021-10-09T10:20:56.246146493Z"
+    description: A inspection utility for the maintenance of Kubernetes clusters.
+    digest: d20d143a654128650af33dfff78e1e1bf63495faed4ffedd902759ca53a770af
+    home: https://github.com/ckotzbauer/chekr
+    keywords:
+    - prometheus
+    - kubernetes
+    - cli
+    - maintenance
+    - clusters
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: chekr
+    sources:
+    - https://github.com/ckotzbauer/chekr
+    - https://github.com/ckotzbauer/helm-charts
+    type: application
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/chekr-0.5.0/chekr-0.5.0.tgz
+    version: 0.5.0
   nfs-client-provisioner:
   - apiVersion: v1
     appVersion: 3.1.0
@@ -650,4 +674,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-09-13T13:31:52.0493921Z"
+generated: "2021-10-09T10:20:56.246969298Z"
