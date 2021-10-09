@@ -1,0 +1,3 @@
+persistence:
+  storageClass: "standard"
+  accessMode: ReadWriteOnce

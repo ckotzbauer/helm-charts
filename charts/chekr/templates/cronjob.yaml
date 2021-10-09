@@ -1,0 +1,79 @@
+{{- if semverCompare ">=1.21-0" .Capabilities.KubeVersion.GitVersion -}}
+apiVersion: batch/v1
+{{- else -}}
+apiVersion: batch/v1beta1
+{{- end }}
+kind: CronJob
+metadata:
+  name: {{ include "chekr.fullname" . }}
+  labels:
+    {{- include "chekr.labels" . | nindent 4 }}
+spec:
+  schedule: {{ .Values.job.schedule | quote }}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          {{- with .Values.podAnnotations }}
+          annotations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          labels:
+            {{- include "chekr.selectorLabels" . | nindent 12 }}
+        spec:
+          {{- with .Values.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          securityContext:
+            {{- toYaml .Values.podSecurityContext | nindent 12 }}
+          containers:
+          - name: {{ .Chart.Name }}
+            securityContext:
+              {{- toYaml .Values.securityContext | nindent 14 }}
+            image: "{{ .Values.job.image.repository }}:{{ .Values.job.image.tag | default .Chart.AppVersion }}"
+            imagePullPolicy: {{ .Values.job.image.pullPolicy }}
+            command:
+              - /bin/sh
+            args:
+              - -c
+              - |
+                {{- range .Values.job.commands }}
+                chekr {{ .command }} --output-file /results/{{ .outputFile }}
+                {{- end }}
+            {{- with .Values.job.env }}
+            env:
+              {{- toYaml . | nindent 14 }}
+            {{- end }}
+            resources:
+              {{- toYaml .Values.job.resources | nindent 14 }}
+            volumeMounts:
+              - name: results
+                mountPath: /results
+            {{- if .Values.job.config }}
+              - name: config
+                mountPath: /.config/chekr
+            {{- end }}
+          volumes:
+            - name: results
+              persistentVolumeClaim:
+                claimName: {{ include "chekr.fullname" . }}
+          {{- if .Values.job.config }}
+            - name: config
+              configMap:
+                name: {{ include "chekr.fullname" . }}
+          {{- end }}
+          serviceAccountName: {{ include "chekr.serviceAccountName" . }}
+          {{- with .Values.job.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.job.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.job.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          restartPolicy: OnFailure

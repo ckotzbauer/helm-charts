@@ -1,0 +1,11 @@
+{{- if .Values.job.config }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "chekr.fullname" . }}
+  labels:
+    {{- include "chekr.labels" . | nindent 4 }}
+data:
+  chekr.yaml: |
+{{ toYaml .Values.job.config | indent 4 }}
+{{- end }}
