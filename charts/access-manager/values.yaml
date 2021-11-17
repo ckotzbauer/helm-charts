@@ -2,6 +2,8 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+replicas: 1
+
 image:
   repository: ghcr.io/ckotzbauer/access-manager
   tag: 0.7.0
