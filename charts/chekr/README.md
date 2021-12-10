@@ -57,7 +57,7 @@ The following table lists the configurable parameters of the Chekr chart and the
 | `webserver.tolerations`                | node tolerations for webserver-pod assignment     | `[]`                                  |
 | `webserver.affinity`                   | node affinity for webserver-pod assignment        | `{}`                                  |
 | `job.image.repository`                 | container image repository                        | `ghcr.io/ckotzbauer/chekr`            |
-| `job.image.tag`                        | container image tag                               | `0.5.0`                               |
+| `job.image.tag`                        | container image tag                               | `0.5.1`                               |
 | `job.image.pullPolicy`                 | container image pull policy                       | `IfNotPresent`                        |
 | `job.schedule`                         | cron-schedule for the job                         | `0 22 * * *`                          |
 | `job.commands`                         | Array of commands and output-files to process     | `[]` See [values.yaml](values.yaml)   |
