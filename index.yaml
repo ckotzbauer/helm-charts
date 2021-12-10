@@ -552,6 +552,29 @@ entries:
     version: 1.0.0
   chekr:
   - apiVersion: v2
+    appVersion: 0.5.1
+    created: "2021-12-10T10:25:48.110048409Z"
+    description: A inspection utility for the maintenance of Kubernetes clusters.
+    digest: 4128d77350eae12e2de76005e9f7abb46b20349d8810c737c2b5f530299f4f67
+    home: https://github.com/ckotzbauer/chekr
+    keywords:
+    - prometheus
+    - kubernetes
+    - cli
+    - maintenance
+    - clusters
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: chekr
+    sources:
+    - https://github.com/ckotzbauer/chekr
+    - https://github.com/ckotzbauer/helm-charts
+    type: application
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/chekr-0.5.1/chekr-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v2
     appVersion: 0.5.0
     created: "2021-10-09T10:20:56.246146493Z"
     description: A inspection utility for the maintenance of Kubernetes clusters.
@@ -736,4 +759,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-09T19:35:26.854198523Z"
+generated: "2021-12-10T10:25:48.110524915Z"
