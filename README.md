@@ -1,6 +1,7 @@
 # Helm Charts
 
 [![](https://github.com/ckotzbauer/helm-charts/workflows/Release%20Charts/badge.svg?branch=main)](https://github.com/ckotzbauer/helm-charts/actions)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/ckotzbauer)](https://artifacthub.io/packages/search?repo=ckotzbauer)
 
 ## Usage
 
