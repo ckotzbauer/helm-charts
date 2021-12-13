@@ -658,6 +658,30 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/nfs-client-provisioner-1.0.0/nfs-client-provisioner-1.0.0.tgz
     version: 1.0.0
+  postgres-operator:
+  - apiVersion: v2
+    appVersion: 1.6.3
+    created: "2021-12-13T15:30:43.527071255Z"
+    description: Postgres Operator creates and manages PostgreSQL clusters running
+      in Kubernetes
+    digest: 5628a359226593901ae64342f9061e017cc7904a14343418bb43db67fd91ea15
+    home: https://github.com/zalando/postgres-operator
+    keywords:
+    - postgres
+    - operator
+    - cloud-native
+    - patroni
+    - spilo
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: postgres-operator
+    sources:
+    - https://github.com/zalando/postgres-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/postgres-operator-1.6.3/postgres-operator-1.6.3.tgz
+    version: 1.6.3
   prometheus-blackbox-exporter:
   - apiVersion: v1
     appVersion: 0.19.0
@@ -759,4 +783,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-10T10:25:48.110524915Z"
+generated: "2021-12-13T15:30:43.527289657Z"
