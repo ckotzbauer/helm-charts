@@ -621,6 +621,24 @@ entries:
   nfs-client-provisioner:
   - apiVersion: v1
     appVersion: 3.1.0
+    created: "2021-12-14T10:01:52.681279506Z"
+    deprecated: true
+    description: DEPRECATED - nfs-client is an automatic provisioner that used your
+      *already configured* NFS server, automatically creating Persistent Volumes.
+    digest: c34ea2043f6b0276185cff544f1c63e0f957a8f61b982729d0cb944870758738
+    home: https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    keywords:
+    - nfs
+    - storage
+    name: nfs-client-provisioner
+    sources:
+    - https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/nfs-client-provisioner-2.0.0/nfs-client-provisioner-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v1
+    appVersion: 3.1.0
     created: "2020-11-15T20:41:41.9241624Z"
     description: nfs-client is an automatic provisioner that used your *already configured*
       NFS server, automatically creating Persistent Volumes.
@@ -752,6 +770,24 @@ entries:
   prometheus-blackbox-exporter:
   - apiVersion: v1
     appVersion: 0.19.0
+    created: "2021-12-14T10:01:52.808273523Z"
+    deprecated: true
+    description: DEPRECATED - Prometheus Blackbox Exporter
+    digest: a6778c5c647f06426b6433af3b5efec680388f0097ef5b0b7c2923566670d58c
+    home: https://github.com/prometheus/blackbox_exporter
+    keywords:
+    - prometheus
+    - blackbox
+    - monitoring
+    name: prometheus-blackbox-exporter
+    sources:
+    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-2.0.0/prometheus-blackbox-exporter-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v1
+    appVersion: 0.19.0
     created: "2021-05-31T17:13:25.96069627Z"
     description: Prometheus Blackbox Exporter
     digest: afbfb633da9d7456de4ab8cf9f1a992f72366153438c0085965a86308fa4c2f6
@@ -850,4 +886,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-14T07:58:48.74398366Z"
+generated: "2021-12-14T10:01:52.80852163Z"
