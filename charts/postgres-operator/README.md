@@ -38,7 +38,7 @@ The following table lists the configurable parameters of the Postgres-operator c
 | ------------------------ | ----------------------- | -------------- |
 | `image.registry` |  | `"registry.opensource.zalan.do"` |
 | `image.repository` |  | `"acid/postgres-operator"` |
-| `image.tag` |  | `"v1.7.0"` |
+| `image.tag` |  | `"v1.7.1"` |
 | `image.pullPolicy` |  | `"IfNotPresent"` |
 | `podAnnotations` |  | `{}` |
 | `podLabels` |  | `{}` |
@@ -49,7 +49,7 @@ The following table lists the configurable parameters of the Postgres-operator c
 | `configGeneral.enable_shm_volume` |  | `true` |
 | `configGeneral.enable_spilo_wal_path_compat` |  | `false` |
 | `configGeneral.etcd_host` |  | `""` |
-| `configGeneral.docker_image` |  | `"registry.opensource.zalan.do/acid/spilo-13:2.1-p1"` |
+| `configGeneral.docker_image` |  | `"registry.opensource.zalan.do/acid/spilo-14:2.1-p3"` |
 | `configGeneral.min_instances` |  | `-1` |
 | `configGeneral.max_instances` |  | `-1` |
 | `configGeneral.repair_period` |  | `"5m"` |
@@ -58,8 +58,8 @@ The following table lists the configurable parameters of the Postgres-operator c
 | `configUsers.replication_username` |  | `"standby"` |
 | `configUsers.super_username` |  | `"postgres"` |
 | `configMajorVersionUpgrade.major_version_upgrade_mode` |  | `"off"` |
-| `configMajorVersionUpgrade.minimal_major_version` |  | `"9.5"` |
-| `configMajorVersionUpgrade.target_major_version` |  | `"13"` |
+| `configMajorVersionUpgrade.minimal_major_version` |  | `"9.6"` |
+| `configMajorVersionUpgrade.target_major_version` |  | `"14"` |
 | `configKubernetes.cluster_domain` |  | `"cluster.local"` |
 | `configKubernetes.cluster_labels.application` |  | `"spilo"` |
 | `configKubernetes.cluster_name_label` |  | `"cluster-name"` |
@@ -103,7 +103,7 @@ The following table lists the configurable parameters of the Postgres-operator c
 | `configLoggingRestApi.ring_log_lines` |  | `100` |
 | `configAwsOrGcp.aws_region` |  | `"eu-central-1"` |
 | `configAwsOrGcp.enable_ebs_gp3_migration` |  | `false` |
-| `configLogicalBackup.logical_backup_docker_image` |  | `"registry.opensource.zalan.do/acid/logical-backup:v1.7.0"` |
+| `configLogicalBackup.logical_backup_docker_image` |  | `"registry.opensource.zalan.do/acid/logical-backup:v1.7.1"` |
 | `configLogicalBackup.logical_backup_job_prefix` |  | `"logical-backup-"` |
 | `configLogicalBackup.logical_backup_provider` |  | `"s3"` |
 | `configLogicalBackup.logical_backup_s3_access_key_id` |  | `""` |
@@ -127,7 +127,7 @@ The following table lists the configurable parameters of the Postgres-operator c
 | `configTeamsApi.team_api_role_configuration.log_statement` |  | `"all"` |
 | `configConnectionPooler.connection_pooler_schema` |  | `"pooler"` |
 | `configConnectionPooler.connection_pooler_user` |  | `"pooler"` |
-| `configConnectionPooler.connection_pooler_image` |  | `"registry.opensource.zalan.do/acid/pgbouncer:master-18"` |
+| `configConnectionPooler.connection_pooler_image` |  | `"registry.opensource.zalan.do/acid/pgbouncer:master-19"` |
 | `configConnectionPooler.connection_pooler_max_db_connections` |  | `60` |
 | `configConnectionPooler.connection_pooler_mode` |  | `"transaction"` |
 | `configConnectionPooler.connection_pooler_number_of_instances` |  | `2` |
