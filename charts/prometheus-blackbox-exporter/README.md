@@ -1,5 +1,11 @@
 # Prometheus Blackbox Exporter
 
+## Deprecation notice
+
+Please use the "prometheus-blackbox-exporter" from the community instead: https://prometheus-community.github.io/helm-charts/
+This chart will be removed at 31.01.2022!!
+
+
 Prometheus exporter for blackbox testing
 
 Learn more: [https://github.com/prometheus/blackbox_exporter](https://github.com/prometheus/blackbox_exporter)

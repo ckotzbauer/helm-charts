@@ -1,5 +1,11 @@
 # nfs-client-provisioner
 
+## Deprecation notice
+
+Please use the "nfs-subdir-external-provisioner" chart instead: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+This chart will be removed at 31.01.2022!!
+
+
 The [NFS client provisioner](https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client) is an automatic provisioner for Kubernetes that uses your _already configured_ NFS server, automatically creating Persistent Volumes.
 
 ## TL;DR;
