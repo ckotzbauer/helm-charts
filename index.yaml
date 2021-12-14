@@ -2,6 +2,27 @@ apiVersion: v1
 entries:
   access-manager:
   - apiVersion: v1
+    appVersion: 0.8.1
+    created: "2021-12-14T07:58:48.743832361Z"
+    description: Kubernetes-Operator to simplify RBAC configurations
+    digest: cd64e4a20da49e4b567e1ae8e0df781da2d83a6481939d9f44d66544e99b826a
+    home: https://github.com/ckotzbauer/access-manager
+    keywords:
+    - kubernetes-operator
+    - operator
+    - rbac
+    - secret
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: access-manager
+    sources:
+    - https://github.com/ckotzbauer/access-manager
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/access-manager-0.8.1/access-manager-0.8.1.tgz
+    version: 0.8.1
+  - apiVersion: v1
     appVersion: 0.8.0
     created: "2021-12-09T19:35:26.85403232Z"
     description: Kubernetes-Operator to simplify RBAC configurations
@@ -829,4 +850,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-14T07:54:03.867599015Z"
+generated: "2021-12-14T07:58:48.74398366Z"
