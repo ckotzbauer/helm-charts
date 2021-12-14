@@ -660,6 +660,29 @@ entries:
     version: 1.0.0
   postgres-operator:
   - apiVersion: v2
+    appVersion: 1.7.0
+    created: "2021-12-14T07:45:48.312448816Z"
+    description: Postgres Operator creates and manages PostgreSQL clusters running
+      in Kubernetes
+    digest: 3594ee205d56d8398748d76eac443217643912dbfeb7fe76d8530781ba40148a
+    home: https://github.com/zalando/postgres-operator
+    keywords:
+    - postgres
+    - operator
+    - cloud-native
+    - patroni
+    - spilo
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: postgres-operator
+    sources:
+    - https://github.com/zalando/postgres-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/postgres-operator-1.7.0/postgres-operator-1.7.0.tgz
+    version: 1.7.0
+  - apiVersion: v2
     appVersion: 1.6.3
     created: "2021-12-13T15:30:43.527071255Z"
     description: Postgres Operator creates and manages PostgreSQL clusters running
@@ -783,4 +806,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-13T15:30:43.527289657Z"
+generated: "2021-12-14T07:45:48.312657637Z"
