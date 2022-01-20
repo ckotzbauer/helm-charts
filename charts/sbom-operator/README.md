@@ -33,6 +33,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 | `image.repository`                     | container image repository                        | `ghcr.io/ckotzbauer/sbom-operator`       |
 | `image.tag`                            | container image tag                               | `0.1.0`                                  |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                           |
+| `args`                                 | argument object for cli-args                      | `{}`                                     |
 | `nodeSelector`                         | node labels for pod assignment                    | `{}`                                     |
 | `tolerations`                          | node tolerations for pod assignment               | `[]`                                     |
 | `affinity`                             | node affinity for pod assignment                  | `{}`                                     |

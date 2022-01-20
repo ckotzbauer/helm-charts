@@ -38,6 +38,16 @@ spec:
 {{ toYaml .Values.securityContext | indent 12 }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+          volumeMounts:
+            - mountPath: /work
+              name: work
+            - mountPath: /tmp
+              name: tmp
+        volumes:
+          - name: work
+            emptyDir: {}
+          - name: tmp
+            emptyDir: {}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
