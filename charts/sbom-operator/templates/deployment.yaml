@@ -43,11 +43,11 @@ spec:
               name: work
             - mountPath: /tmp
               name: tmp
-        volumes:
-          - name: work
-            emptyDir: {}
-          - name: tmp
-            emptyDir: {}
+      volumes:
+        - name: work
+          emptyDir: {}
+        - name: tmp
+          emptyDir: {}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
