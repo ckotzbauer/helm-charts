@@ -1,0 +1,37 @@
+# Default values for sbom-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: ghcr.io/ckotzbauer/sbom-operator
+  tag: 0.1.0
+  pullPolicy: IfNotPresent
+
+podAnnotations: {}
+
+resources: {}
+#  requests:
+#    cpu: 500m
+#    memory: 1Gi
+#  limits:
+#    cpu: 100m
+#    memory: 100Mi
+
+securityContext:
+  privileged: false
+  runAsUser: 1001
+  runAsNonRoot: true
+
+serviceAccount:
+  # Specifies whether a ServiceAccount should be created
+  create: true
+
+  # The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
