@@ -9,6 +9,8 @@ image:
 
 args: {}
 
+envVars: {}
+
 podAnnotations: {}
 
 resources: {}

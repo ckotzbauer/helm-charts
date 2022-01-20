@@ -34,6 +34,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 | `image.tag`                            | container image tag                               | `0.1.0`                                  |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                           |
 | `args`                                 | argument object for cli-args                      | `{}`                                     |
+| `envVars`                              | environment variables                             | `{}`                                     |
 | `nodeSelector`                         | node labels for pod assignment                    | `{}`                                     |
 | `tolerations`                          | node tolerations for pod assignment               | `[]`                                     |
 | `affinity`                             | node affinity for pod assignment                  | `{}`                                     |

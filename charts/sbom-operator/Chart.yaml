@@ -1,7 +1,7 @@
 apiVersion: v2
 description: Catalogue all images of a Kubernetes cluster to Git with Syft
 name: sbom-operator
-version: 0.1.2
+version: 0.1.3
 appVersion: 0.1.0
 home: https://github.com/ckotzbauer/sbom-operator
 sources:
