@@ -886,4 +886,28 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/prometheus-blackbox-exporter-1.0.0/prometheus-blackbox-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-14T10:01:52.80852163Z"
+  sbom-operator:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-01-20T10:53:32.930444147Z"
+    description: Catalogue all images of a Kubernetes cluster to Git with Syft
+    digest: ababfd74248e5a3dba8ae29f356ce3a31e8248ec3f47141de79ca94a6fc0d716
+    home: https://github.com/ckotzbauer/sbom-operator
+    keywords:
+    - kubernetes-operator
+    - operator
+    - sbom
+    - syft
+    - git
+    - supply-chain-security
+    maintainers:
+    - email: git@ckotzbauer.de
+      name: ckotzbauer
+    name: sbom-operator
+    sources:
+    - https://github.com/ckotzbauer/sbom-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/sbom-operator-0.1.0/sbom-operator-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-01-20T10:53:32.930702952Z"
