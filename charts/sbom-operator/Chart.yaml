@@ -1,0 +1,19 @@
+apiVersion: v2
+description: Catalogue all images of a Kubernetes cluster to Git with Syft
+name: sbom-operator
+version: 0.1.0
+appVersion: 0.1.0
+home: https://github.com/ckotzbauer/sbom-operator
+sources:
+  - https://github.com/ckotzbauer/sbom-operator
+  - https://github.com/ckotzbauer/helm-charts
+keywords:
+  - kubernetes-operator
+  - operator
+  - sbom
+  - syft
+  - git
+  - supply-chain-security
+maintainers:
+  - name: ckotzbauer
+    email: git@ckotzbauer.de
