@@ -1,6 +1,6 @@
 # sbom-operator
 
-> Catalogue all images of a Kubernetes cluster to Git with Syft.
+> Catalogue all images of a Kubernetes cluster to multiple targets with Syft.
 
 Learn more: [https://github.com/ckotzbauer/sbom-operator](https://github.com/ckotzbauer/sbom-operator)
 
@@ -31,7 +31,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 |               Parameter                |                    Description                    |            Default                       |
 | -------------------------------------- | ------------------------------------------------- | ---------------------------------------- |
 | `image.repository`                     | container image repository                        | `ghcr.io/ckotzbauer/sbom-operator`       |
-| `image.tag`                            | container image tag                               | `0.2.0`                                  |
+| `image.tag`                            | container image tag                               | `0.3.0`                                  |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                           |
 | `args`                                 | argument object for cli-args                      | `{}`                                     |
 | `envVars`                              | environment variables                             | `{}`                                     |
