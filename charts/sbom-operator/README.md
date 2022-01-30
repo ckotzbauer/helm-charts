@@ -31,7 +31,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 |               Parameter                |                    Description                    |            Default                       |
 | -------------------------------------- | ------------------------------------------------- | ---------------------------------------- |
 | `image.repository`                     | container image repository                        | `ghcr.io/ckotzbauer/sbom-operator`       |
-| `image.tag`                            | container image tag                               | `0.3.0`                                  |
+| `image.tag`                            | container image tag                               | `0.3.1`                                  |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                           |
 | `args`                                 | argument object for cli-args                      | `{}`                                     |
 | `envVars`                              | environment variables                             | `{}`                                     |
