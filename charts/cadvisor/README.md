@@ -28,6 +28,10 @@ $ helm install --name my-release ckotzbauer/cadvisor
 
 The command deploys cAdvisor on the Kubernetes cluster using the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
+## Upgrading from v1.x to v2.x
+
+- `metrics.relabelings` was renamed to `metrics.metricsRelabelings` to match the ServiceMonitor CRD naming
+
 ## Uninstalling the Chart
 
 To uninstall/delete the `my-release` deployment:
@@ -62,7 +66,8 @@ The following table lists the configurable parameters of the cAdvisor chart and 
 | `podSecurityContext.create`    | create the podSecurityContext in container spec  | `false`                    |
 | `podSecurityContext.privileged`| set podSecurityContext privileged to true        | `false`                    |
 | `metrics.enabled`              | create ServiceMonitor CR for Prometheus operator | `false`                    |
-| `metrics.relabeling`           | add relabeling configuration to ServiceMonitor   | `[]`                       |
+| `metrics.relabelings`          | add pre-scraping relabeling to ServiceMonitor    | `[]`                       |
+| `metrics.metricsRelabelings`   | add pre-ingestion relabeling to ServiceMonitor   | `[]`                       |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
