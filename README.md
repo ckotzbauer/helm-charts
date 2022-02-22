@@ -18,3 +18,4 @@ helm repo add ckotzbauer https://ckotzbauer.github.io/helm-charts
 - [chekr](https://github.com/ckotzbauer/helm-charts/tree/main/charts/chekr)
 - [postgres-operator](https://github.com/ckotzbauer/helm-charts/tree/main/charts/postgres-operator)
 - [sbom-operator](https://github.com/ckotzbauer/helm-charts/tree/main/charts/sbom-operator)
+- [vulnerability-operator](https://github.com/ckotzbauer/helm-charts/tree/main/charts/vulnerability-operator)
