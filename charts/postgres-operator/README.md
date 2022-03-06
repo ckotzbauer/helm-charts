@@ -49,7 +49,7 @@ The following table lists the configurable parameters of the Postgres-operator c
 | `configGeneral.enable_shm_volume` |  | `true` |
 | `configGeneral.enable_spilo_wal_path_compat` |  | `false` |
 | `configGeneral.etcd_host` |  | `""` |
-| `configGeneral.docker_image` |  | `"registry.opensource.zalan.do/acid/spilo-14:2.1-p3"` |
+| `configGeneral.docker_image` |  | `"registry.opensource.zalan.do/acid/spilo-14:2.1-p4"` |
 | `configGeneral.min_instances` |  | `-1` |
 | `configGeneral.max_instances` |  | `-1` |
 | `configGeneral.repair_period` |  | `"5m"` |
