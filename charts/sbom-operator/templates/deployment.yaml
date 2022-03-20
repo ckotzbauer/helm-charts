@@ -38,6 +38,20 @@ spec:
 {{ toYaml .Values.securityContext | indent 12 }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+          ports:
+          - containerPort: 8080
+            name: http
+            protocol: TCP
+          livenessProbe:
+            timeoutSeconds: 3
+            httpGet:
+              path: "/health"
+              port: http
+          readinessProbe:
+            timeoutSeconds: 3
+            httpGet:
+              path: "/health"
+              port: http
           volumeMounts:
             - mountPath: /work
               name: work
