@@ -19,3 +19,15 @@ helm repo add ckotzbauer https://ckotzbauer.github.io/helm-charts
 - [postgres-operator](https://github.com/ckotzbauer/helm-charts/tree/main/charts/postgres-operator)
 - [sbom-operator](https://github.com/ckotzbauer/helm-charts/tree/main/charts/sbom-operator)
 - [vulnerability-operator](https://github.com/ckotzbauer/helm-charts/tree/main/charts/vulnerability-operator)
+
+## Contributing
+
+Please refer to the [Contribution guildelines](https://github.com/ckotzbauer/.github/blob/main/CONTRIBUTING.md).
+
+## Code of conduct
+
+Please refer to the [Conduct guildelines](https://github.com/ckotzbauer/.github/blob/main/CODE_OF_CONDUCT.md).
+
+## Security
+
+Please refer to the [Security process](https://github.com/ckotzbauer/.github/blob/main/SECURITY.md).
