@@ -6,7 +6,7 @@ replicas: 1
 
 image:
   repository: ghcr.io/ckotzbauer/access-manager
-  tag: 0.8.1
+  tag: 0.9.0
   pullPolicy: IfNotPresent
 
 podAnnotations: {}
@@ -23,6 +23,13 @@ securityContext:
   privileged: false
   runAsUser: 1001
   runAsNonRoot: true
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  seccompProfile:
+    type: RuntimeDefault
+  capabilities:
+    drop:
+      - ALL
 
 serviceAccount:
   # Specifies whether a ServiceAccount should be created
