@@ -41,8 +41,9 @@ The following table lists the configurable parameters of the sbom-operator chart
 | `podAnnotations`                       | annotations to add to each pod                    | `{}`                                     |
 | `resources`                            | pod resource requests & limits                    | See [values.yaml](values.yaml)           |
 | `securityContext`                      | container securityContext                         | See [values.yaml](values.yaml)           |
-| `serviceAccount.create`	             | Should we create a ServiceAccount	             | `true`                                   |
-| `serviceAccount.name`		             | Name of the ServiceAccount to use                 | null                                     |
+| `serviceAccount.create`                | Should we create a ServiceAccount                 | `true`                                   |
+| `serviceAccount.name`                  | Name of the ServiceAccount to use                 | null                                     |
+| `jobImageMode`                         | Whether or not a job-image is used.               | `false`                                  |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 

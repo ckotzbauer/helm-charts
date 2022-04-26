@@ -34,6 +34,20 @@ spec:
           {{- if .Values.envVars }}
             {{ toYaml .Values.envVars | nindent 12 }}
           {{- end }}
+          {{- if .Values.jobImageMode }}
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_UID
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.uid
+          {{- end }}
           securityContext:
 {{ toYaml .Values.securityContext | indent 12 }}
           resources:

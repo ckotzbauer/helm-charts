@@ -13,6 +13,8 @@ envVars: {}
 
 podAnnotations: {}
 
+jobImageMode: false
+
 resources: {}
 #  requests:
 #    cpu: 500m

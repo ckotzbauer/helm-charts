@@ -25,3 +25,21 @@ rules:
   verbs:
   - get
   - update
+{{- if .Values.jobImageMode }}
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+  - create
+  - delete
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - get
+  - create
+  - delete
+{{- end }}
