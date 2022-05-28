@@ -61,6 +61,7 @@ The following table lists the configurable parameters of the cAdvisor chart and 
 | `serviceAccount.create`        | create a own serviceAccount for the pod          | `true`                     |
 | `serviceAccount.name`          | name of the serviceAccount to create             | `""`                       |
 | `podAnnotations`               | annotations for the daemonset pods               | `{}`                       |
+| `priorityClassName`            | priority classes name for the pod                | `{}`                       |
 | `podSecurityPolicy.create`     | create a own PodSecurityPolicy for the pod       | `false`                    |
 | `podSecurityPolicy.privileged` | create the PodSecurityPolicy as privileged       | `false`                    |
 | `podSecurityContext.create`    | create the podSecurityContext in container spec  | `false`                    |
