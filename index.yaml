@@ -314,6 +314,26 @@ entries:
   cadvisor:
   - apiVersion: v1
     appVersion: 0.44.1
+    created: "2022-05-29T07:19:13.508822873Z"
+    description: A chart for a Cadvisor deployment
+    digest: 876c4511f851a07a3c77007453f40742b9e32058b1075b43a69dbb9ab98bc727
+    home: https://github.com/google/cadvisor
+    keywords:
+    - prometheus
+    - cadvisor
+    - monitoring
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: cadvisor
+    sources:
+    - https://github.com/google/cadvisor
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-2.2.0/cadvisor-2.2.0.tgz
+    version: 2.2.0
+  - apiVersion: v1
+    appVersion: 0.44.1
     created: "2022-04-27T13:29:21.897496738Z"
     description: A chart for a Cadvisor deployment
     digest: 0e31c8f5c7be04f6dde6744414a884026899c81f5259f3bbe696b81a391a5354
@@ -1439,4 +1459,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.1.0/vulnerability-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-14T14:35:12.628779353Z"
+generated: "2022-05-29T07:19:13.509078977Z"
