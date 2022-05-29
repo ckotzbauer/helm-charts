@@ -31,14 +31,14 @@ spec:
             {{- end }}
           {{- end }}
           env:
-          {{- if .Values.envVars }}
-            {{ toYaml .Values.envVars | nindent 12 }}
-          {{- end }}
-          {{- if .Values.jobImageMode }}
           - name: POD_NAMESPACE
             valueFrom:
               fieldRef:
                 fieldPath: metadata.namespace
+          {{- if .Values.envVars }}
+            {{ toYaml .Values.envVars | nindent 12 }}
+          {{- end }}
+          {{- if .Values.jobImageMode }}
           - name: POD_NAME
             valueFrom:
               fieldRef:
