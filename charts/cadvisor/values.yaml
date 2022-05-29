@@ -44,6 +44,9 @@ resources: {}
 
 podAnnotations: {}
 
+# priorityClassName: system-cluster-critical
+priorityClassName: {}
+
 # sometimes errors are encountered when using the cpu load reader without being on the host network
 hostNetwork: false
 
