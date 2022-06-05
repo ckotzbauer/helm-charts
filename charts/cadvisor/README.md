@@ -48,7 +48,7 @@ The following table lists the configurable parameters of the cAdvisor chart and 
 | Parameter                      | Description                                      | Default                    |
 | ------------------------------ | ------------------------------------------------ | -------------------------- |
 | `image.repository`             | container image repository                       | `gcr.io/cadvisor/cadvisor` |
-| `image.tag`                    | container image tag                              | `v0.44.1`                  |
+| `image.tag`                    | container image tag                              | `v0.44.0`                  |
 | `image.pullPolicy`             | container image pull policy                      | `IfNotPresent`             |
 | `image.pullSecrets`            | container image pull secrets                     | `[]`                       |
 | `nodeSelector`                 | node labels for pod assignment                   | `{}`                       |
