@@ -1,0 +1,9 @@
+args:
+  format: json
+  verbosity: debug
+  cron: "@hourly"
+  targets: git
+  git-author-name: SBOM Operator
+  git-author-email: sbom-operator@example.com
+  git-repository: https://example.com/test-repo
+  git-access-token: letMeTest!

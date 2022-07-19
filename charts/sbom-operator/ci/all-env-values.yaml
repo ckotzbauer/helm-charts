@@ -1,0 +1,17 @@
+envVars:
+  - name: SBOM_FORMAT
+    value: json
+  - name: SBOM_VERBOSITY
+    value: debug
+  - name: SBOM_CRON
+    value: "@hourly"
+  - name: SBOM_TARGETS
+    value: git
+  - name: SBOM_GIT_AUTHOR_NAME
+    value: SBOM Operator
+  - name: SBOM_GIT_AUTHOR_EMAIL
+    value: sbom-operator@example.com
+  - name: SBOM_GIT_REPOSITORY
+    value: https://example.com/test-repo
+  - name: SBOM_GIT_ACCESS_TOKEN
+    value: letMeTest!
