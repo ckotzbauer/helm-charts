@@ -35,10 +35,10 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.namespace
-          {{- if .Values.envVars }}
-            {{ toYaml .Values.envVars | nindent 12 }}
-          {{- end }}
-          {{- if .Values.jobImageMode }}
+        {{- if .Values.envVars }}
+          {{ toYaml .Values.envVars | nindent 10 }}
+        {{- end }}
+        {{- if .Values.jobImageMode }}
           - name: POD_NAME
             valueFrom:
               fieldRef:
@@ -47,7 +47,7 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.uid
-          {{- end }}
+        {{- end }}
           securityContext:
 {{ toYaml .Values.securityContext | indent 12 }}
           resources:
