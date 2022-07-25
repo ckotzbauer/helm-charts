@@ -6,7 +6,7 @@ replicas: 1
 
 image:
   repository: ghcr.io/ckotzbauer/access-manager
-  tag: 0.9.0
+  tag: ""
   pullPolicy: IfNotPresent
 
 podAnnotations: {}
