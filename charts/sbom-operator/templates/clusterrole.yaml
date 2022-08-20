@@ -25,6 +25,12 @@ rules:
   verbs:
   - get
   - update
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - watch
 {{- if .Values.jobImageMode }}
 - apiGroups:
   - ""
