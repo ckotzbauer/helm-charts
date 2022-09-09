@@ -76,6 +76,10 @@ spec:
           emptyDir: {}
         - name: tmp
           emptyDir: {}
+    {{- with .Values.image.pullSecrets }}
+      imagePullSecrets:
+{{ toYaml . | indent 8 }}
+    {{- end }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
