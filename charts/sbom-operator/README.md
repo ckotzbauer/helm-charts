@@ -31,7 +31,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 |               Parameter                |                    Description                    |            Default                       |
 | -------------------------------------- | ------------------------------------------------- | ---------------------------------------- |
 | `image.repository`                     | container image repository                        | `ghcr.io/ckotzbauer/sbom-operator`       |
-| `image.tag`                            | container image tag                               | `0.16.0`                                 |
+| `image.tag`                            | container image tag                               | `0.17.0`                                 |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                           |
 | `image.pullSecrets`                    | image pull-secrets                                | `[]`                                     |
 | `args`                                 | argument object for cli-args                      | `{}`                                     |
@@ -45,6 +45,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 | `serviceAccount.create`                | Should we create a ServiceAccount                 | `true`                                   |
 | `serviceAccount.name`                  | Name of the ServiceAccount to use                 | null                                     |
 | `jobImageMode`                         | Whether or not a job-image is used.               | `false`                                  |
+| `extraVolumes`                         | Extra volumes (needed for GithubApp PK).          | `[]`                                     |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 

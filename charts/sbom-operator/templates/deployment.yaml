@@ -76,6 +76,9 @@ spec:
           emptyDir: {}
         - name: tmp
           emptyDir: {}
+{{- if .Values.extraVolumes }}
+{{- toYaml .Values.extraVolumes  | nindent 8 }}
+{{- end }}
     {{- with .Values.image.pullSecrets }}
       imagePullSecrets:
 {{ toYaml . | indent 8 }}
