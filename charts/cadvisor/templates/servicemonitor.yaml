@@ -18,6 +18,8 @@ spec:
       - {{ .Release.Namespace }}
   endpoints:
     - path: /metrics
+      interval: {{ .Values.metrics.interval }}
+      scrapeTimeout: {{ .Values.metrics.scrapeTimeout }}
       port: http
       {{- if .Values.metrics.relabelings }}
       relabelings:
