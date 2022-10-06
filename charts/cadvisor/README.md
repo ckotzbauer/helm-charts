@@ -68,6 +68,8 @@ The following table lists the configurable parameters of the cAdvisor chart and 
 | `podSecurityContext.privileged`| set podSecurityContext privileged to true        | `false`                    |
 | `metrics.enabled`              | create ServiceMonitor CR for Prometheus operator | `false`                    |
 | `metrics.relabelings`          | add pre-scraping relabeling to ServiceMonitor    | `[]`                       |
+| `metrics.interval`             | scraping interval for the ServiceMonitor         | `30s`                       |
+| `metrics.scrapeTimeout`        | scraping timeout for the ServiceMonitor          | `30s`                       |
 | `metrics.metricsRelabelings`   | add pre-ingestion relabeling to ServiceMonitor   | `[]`                       |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
