@@ -42,7 +42,7 @@ The following table lists the configurable parameters of the Access-Manager char
 | -------------------------------------- | ------------------------------------------------- | ------------------------------------- |
 | `replicas`                             | replicas of deployment (leader-election only > 1) | `1`                                   |
 | `image.repository`                     | container image repository                        | `ghcr.io/ckotzbauer/access-manager`   |
-| `image.tag`                            | container image tag                               | `0.10.0`                               |
+| `image.tag`                            | container image tag                               | `0.11.0`                               |
 | `image.pullPolicy`                     | container image pull policy                       | `IfNotPresent`                        |
 | `nodeSelector`                         | node labels for pod assignment                    | `{}`                                  |
 | `tolerations`                          | node tolerations for pod assignment               | `[]`                                  |
