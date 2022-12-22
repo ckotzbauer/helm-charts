@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: {{ template "cadvisor.name" . }}
+  namespace: {{ .Release.Namespace }}
   annotations:
       seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
   labels:
