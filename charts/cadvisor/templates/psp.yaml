@@ -3,6 +3,7 @@ apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
   name: {{ template "cadvisor.name" . }}
+  namespace: {{ .Release.Namespace }}
 spec:
   seLinux:
     rule: RunAsAny
