@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "github>ckotzbauer/renovate-config:default",
+    "github>ckotzbauer/renovate-config:weekly"
+  ]
+}
