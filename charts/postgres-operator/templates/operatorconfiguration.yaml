@@ -42,4 +42,4 @@ configuration:
 {{ toYaml .Values.configConnectionPooler | indent 4 }}
   patroni:
 {{ toYaml .Values.configPatroni | indent 4 }}
-{{- end }}
+
