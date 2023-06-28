@@ -20,6 +20,9 @@ spec:
       labels:
         app: {{ template "cadvisor.name" . }}
         release: {{ .Release.Name }}
+        {{- range $key, $value := .Values.podLabels }}
+        {{ $key }}: {{ $value | quote }}
+        {{- end }}
       annotations:
         {{- range $key, $value := .Values.podAnnotations }}
         {{ $key }}: {{ $value | quote }}
