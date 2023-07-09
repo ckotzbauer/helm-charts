@@ -21,6 +21,15 @@ rules:
 - apiGroups:
   - ""
   resources:
+  - configmaps
+  verbs:
+  - get
+  - create
+  - list
+  - delete
+- apiGroups:
+  - ""
+  resources:
   - pods
   verbs:
   - get
