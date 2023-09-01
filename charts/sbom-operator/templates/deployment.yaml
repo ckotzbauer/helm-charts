@@ -17,6 +17,9 @@ spec:
 {{ toYaml .Values.podAnnotations | indent 8 }}
     {{- end }}
     spec:
+      {{- if .Values.priorityClassName }}
+      priorityClassName: {{ .Values.priorityClassName }}
+      {{- end }}
       serviceAccountName: {{ template "app.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}

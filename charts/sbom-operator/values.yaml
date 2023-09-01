@@ -12,9 +12,11 @@ args: {}
 
 envVars: {}
 
+jobImageMode: false
+
 podAnnotations: {}
 
-jobImageMode: false
+priorityClassName: ""
 
 resources: {}
 #  requests:
