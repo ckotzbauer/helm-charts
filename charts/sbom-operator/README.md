@@ -40,6 +40,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 | `tolerations`                          | node tolerations for pod assignment               | `[]`                                     |
 | `affinity`                             | node affinity for pod assignment                  | `{}`                                     |
 | `podAnnotations`                       | annotations to add to each pod                    | `{}`                                     |
+| `priorityClassName`                    | priority class name for the pod                   | `""`                                     |
 | `resources`                            | pod resource requests & limits                    | See [values.yaml](values.yaml)           |
 | `securityContext`                      | container securityContext                         | See [values.yaml](values.yaml)           |
 | `serviceAccount.create`                | Should we create a ServiceAccount                 | `true`                                   |
