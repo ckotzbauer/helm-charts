@@ -53,7 +53,7 @@ spec:
         {{- range .Values.container.hostPaths }}
         - name: {{ .name }}
           mountPath: {{ default .path .mount }}
-          readOnly: true
+          readOnly: {{ list nil true | has .readOnly }}
         {{- end }}
         {{ if .Values.podSecurityContext.create }}
         securityContext:

@@ -21,14 +21,19 @@ container:
     - name: rootfs
       path: "/"
       mount: "/rootfs"
+      readOnly: true
     - name: varrun
       path: "/var/run"
+      readOnly: true
     - name: sys
       path: "/sys"
+      readOnly: true
     - name: docker
       path: "/var/lib/docker"
+      readOnly: true
     - name: disk
       path: "/dev/disk"
+      readOnly: true
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
