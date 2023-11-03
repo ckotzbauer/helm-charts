@@ -89,3 +89,6 @@ $ helm install --name my-release -f values.yaml ckotzbauer/cadvisor
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
+
+## Centos, Fedora and RHEL
+You may need to run the container with additional configuration. Please see [this article](https://github.com/google/cadvisor/blob/master/docs/running.md#centos-fedora-and-rhel).
