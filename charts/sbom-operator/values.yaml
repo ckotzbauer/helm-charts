@@ -53,3 +53,5 @@ tolerations: []
 affinity: {}
 
 extraVolumes: []
+
+extraVolumeMounts: []

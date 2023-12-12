@@ -74,6 +74,9 @@ spec:
               name: work
             - mountPath: /tmp
               name: tmp
+            {{- if .Values.extraVolumeMounts }}
+{{- toYaml .Values.extraVolumeMounts  | nindent 12 }}
+            {{- end }}
       volumes:
         - name: work
           emptyDir: {}
