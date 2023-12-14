@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "chekr.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "chekr.labels" . | nindent 4 }}
 spec:

@@ -6,6 +6,7 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: {{ include "chekr.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "chekr.labels" . | nindent 4 }}
 spec:
