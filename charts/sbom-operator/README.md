@@ -47,6 +47,7 @@ The following table lists the configurable parameters of the sbom-operator chart
 | `serviceAccount.name`                  | Name of the ServiceAccount to use                 | null                                     |
 | `jobImageMode`                         | Whether or not a job-image is used.               | `false`                                  |
 | `extraVolumes`                         | Extra volumes (needed for GithubApp PK).          | `[]`                                     |
+| `extraVolumeMounts`                    | Extra volume mounts (useful for adding CAs)       | `[]`                                     |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
