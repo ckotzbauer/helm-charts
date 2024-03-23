@@ -905,6 +905,29 @@ entries:
     version: 0.5.0
   postgres-operator:
   - apiVersion: v2
+    appVersion: 1.11.0
+    created: "2024-03-23T16:11:47.275781271Z"
+    description: Postgres Operator creates and manages PostgreSQL clusters running
+      in Kubernetes
+    digest: d5059e1fb2badf217bb8bb5bc725ec0c285961d5925f6444624fa67a63c9403d
+    home: https://github.com/zalando/postgres-operator
+    keywords:
+    - postgres
+    - operator
+    - cloud-native
+    - patroni
+    - spilo
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: postgres-operator
+    sources:
+    - https://github.com/zalando/postgres-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/postgres-operator-1.11.0/postgres-operator-1.11.0.tgz
+    version: 1.11.0
+  - apiVersion: v2
     appVersion: 1.10.0
     created: "2023-04-30T08:16:59.741420976Z"
     description: Postgres Operator creates and manages PostgreSQL clusters running
@@ -3005,4 +3028,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.1.0/vulnerability-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-12T14:26:29.916297281Z"
+generated: "2024-03-23T16:11:47.27599385Z"
