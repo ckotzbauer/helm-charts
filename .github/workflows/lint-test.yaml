@@ -13,12 +13,9 @@ jobs:
 
       - name: Set up Helm
         uses: azure/setup-helm@v3.5
-        with:
-          version: v3.8.1
 
-      - uses: actions/setup-python@v5.1.0
-        with:
-          python-version: "3.10"
+      - name: Setup Python
+        uses: ckotzbauer/actions-toolkit/setup-python@0.41.0
 
       - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.6.1
@@ -38,7 +35,7 @@ jobs:
         if: steps.list-changed.outputs.changed == 'true'
         uses: helm/kind-action@v1.9.0
         with:
-          version: v0.16.0
+          version: v0.22.0
 
       - name: Run chart-testing (install)
         run: ct install --target-branch main
