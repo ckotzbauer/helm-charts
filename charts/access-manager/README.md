@@ -50,6 +50,7 @@ The following table lists the configurable parameters of the Access-Manager char
 | `podAnnotations`                       | annotations to add to each pod                    | `{}`                                  |
 | `priorityClassName`                    | priority class name for the pod                   | `""`                                  |
 | `resources`                            | pod resource requests & limits                    | See [values.yaml](values.yaml)        |
+| `podSecurityContext`                   | pod securityContext                               | See [values.yaml](values.yaml)        |
 | `securityContext`                      | container securityContext                         | See [values.yaml](values.yaml)        |
 | `serviceAccount.create`	             | Should we create a ServiceAccount	             | `true`                                |
 | `serviceAccount.name`		             | Name of the ServiceAccount to use                 | null                                  |

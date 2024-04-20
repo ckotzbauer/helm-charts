@@ -26,6 +26,8 @@ resources: {}
 #    cpu: 100m
 #    memory: 100Mi
 
+podSecurityContext: {}
+
 securityContext:
   privileged: false
   runAsUser: 1001

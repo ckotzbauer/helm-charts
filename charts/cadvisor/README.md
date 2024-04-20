@@ -60,6 +60,7 @@ The following table lists the configurable parameters of the cAdvisor chart and 
 | `resources`                    | pod resource requests & limits                   | `{}`                       |
 | `serviceAccount.create`        | create a own serviceAccount for the pod          | `true`                     |
 | `serviceAccount.name`          | name of the serviceAccount to create             | `""`                       |
+| `daemonsetAnnotations`         | annotations for the daemonset                    | `{}`                       |
 | `podAnnotations`               | annotations for the daemonset pods               | `{}`                       |
 | `podLabels`                    | labels for the daemonset pods                    | `{}`                       |
 | `priorityClassName`            | priority classes name for the pod                | `{}`                       |

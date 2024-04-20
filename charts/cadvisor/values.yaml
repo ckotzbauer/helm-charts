@@ -50,6 +50,9 @@ resources: {}
 podAnnotations: {}
 podLabels: {}
 
+daemonsetAnnotations:
+  seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
+
 # priorityClassName: system-cluster-critical
 priorityClassName: {}
 
