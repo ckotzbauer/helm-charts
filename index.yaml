@@ -3,6 +3,27 @@ entries:
   access-manager:
   - apiVersion: v1
     appVersion: 0.13.0
+    created: "2024-04-20T08:24:28.574957379Z"
+    description: Kubernetes-Operator to simplify RBAC configurations
+    digest: c5a8282ec76c6672883e2185c5d5c58a59ee2a93d7faf66955c1a771fad2ba9c
+    home: https://github.com/ckotzbauer/access-manager
+    keywords:
+    - kubernetes-operator
+    - operator
+    - rbac
+    - secret
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: access-manager
+    sources:
+    - https://github.com/ckotzbauer/access-manager
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/access-manager-0.14.1/access-manager-0.14.1.tgz
+    version: 0.14.1
+  - apiVersion: v1
+    appVersion: 0.13.0
     created: "2024-03-30T14:42:29.14854169Z"
     description: Kubernetes-Operator to simplify RBAC configurations
     digest: 7c4b577233934c061204995aed86b6ff1947557f64551dddf69e9d20a948a5c1
@@ -417,6 +438,26 @@ entries:
     - https://github.com/ckotzbauer/helm-charts/releases/download/access-manager-0.1.0/access-manager-0.1.0.tgz
     version: 0.1.0
   cadvisor:
+  - apiVersion: v1
+    appVersion: 0.49.1
+    created: "2024-04-20T08:24:28.736020671Z"
+    description: A chart for a Cadvisor deployment
+    digest: 8e7a5874c62c775a24b4487f9afaa4f0e5a0baf72ab4ea58fc113cda6302ec00
+    home: https://github.com/google/cadvisor
+    keywords:
+    - prometheus
+    - cadvisor
+    - monitoring
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: cadvisor
+    sources:
+    - https://github.com/google/cadvisor
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-2.3.3/cadvisor-2.3.3.tgz
+    version: 2.3.3
   - apiVersion: v1
     appVersion: 0.49.1
     created: "2024-04-05T09:49:45.197101818Z"
@@ -1153,6 +1194,30 @@ entries:
     - https://github.com/ckotzbauer/helm-charts/releases/download/postgres-operator-1.6.3/postgres-operator-1.6.3.tgz
     version: 1.6.3
   sbom-operator:
+  - apiVersion: v2
+    appVersion: 0.32.0
+    created: "2024-04-20T08:24:28.8690305Z"
+    description: Catalogue all images of a Kubernetes cluster to multiple targets
+      with Syft
+    digest: ac777a662688234d471b5c06108361410885445942e5c48b44f453a5ce08c71f
+    home: https://github.com/ckotzbauer/sbom-operator
+    keywords:
+    - kubernetes-operator
+    - operator
+    - sbom
+    - syft
+    - git
+    - supply-chain-security
+    maintainers:
+    - email: git@ckotzbauer.de
+      name: ckotzbauer
+    name: sbom-operator
+    sources:
+    - https://github.com/ckotzbauer/sbom-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/sbom-operator-0.33.1/sbom-operator-0.33.1.tgz
+    version: 0.33.1
   - apiVersion: v2
     appVersion: 0.32.0
     created: "2024-04-05T16:09:06.212631055Z"
@@ -2231,6 +2296,30 @@ entries:
   vulnerability-operator:
   - apiVersion: v2
     appVersion: 0.23.0
+    created: "2024-04-20T08:24:29.012197129Z"
+    description: Scans SBOMs for vulnerabilities
+    digest: bbad192afec9766ca4eb6895acc185560fe638dc627385a9b619cbfebd24b268
+    home: https://github.com/ckotzbauer/vulnerability-operator
+    keywords:
+    - kubernetes-operator
+    - operator
+    - sbom
+    - grype
+    - vulnerability
+    - security
+    - supply-chain-security
+    maintainers:
+    - email: git@ckotzbauer.de
+      name: ckotzbauer
+    name: vulnerability-operator
+    sources:
+    - https://github.com/ckotzbauer/vulnerability-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.25.1/vulnerability-operator-0.25.1.tgz
+    version: 0.25.1
+  - apiVersion: v2
+    appVersion: 0.23.0
     created: "2024-03-29T11:42:05.006115879Z"
     description: Scans SBOMs for vulnerabilities
     digest: 92e4685e1e4c277a45d82354ce6ed0e65c452fe0f1a02d66eec1945efc7bbfe3
@@ -3141,4 +3230,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.1.0/vulnerability-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-05T16:09:06.213174368Z"
+generated: "2024-04-20T08:24:29.012939292Z"
