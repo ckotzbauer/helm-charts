@@ -38,7 +38,7 @@ The following table lists the configurable parameters of the Postgres-operator c
 |-----|------|---------|-------------|
 | image.registry | string | `"registry.opensource.zalan.do"` |  |
 | image.repository | string | `"acid/postgres-operator"` |  |
-| image.tag | string | `"v1.8.0"` |  |
+| image.tag | string | `"v1.12.0"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
