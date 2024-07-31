@@ -10,7 +10,7 @@ image:
 
 args: {}
 
-envVars: {}
+envVars: []
 
 jobImageMode: false
 
