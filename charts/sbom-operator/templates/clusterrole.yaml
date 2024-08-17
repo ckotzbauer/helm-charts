@@ -18,7 +18,7 @@ rules:
   - secrets
   verbs:
   - get
-{{- if and .Values.args (hasKey .Values.args "targets") .Values.args.targets (contains "configmap" .Values.args.targets) }}
+{{- if and .Values.args (hasKey .Values.args "targets") .Values.args.targets (contains "configmap" (coalesce .Values.args.targets "")) }}
 - apiGroups:
   - ""
   resources:
