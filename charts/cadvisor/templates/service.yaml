@@ -4,10 +4,7 @@ metadata:
   name: {{ template "cadvisor.name" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ template "cadvisor.name" . }}
-    chart: {{ template "cadvisor.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "cadvisor.labels" . | nindent 4}}
 spec:
   ports:
   - name: http
@@ -15,5 +12,5 @@ spec:
     targetPort: {{ .Values.container.port }}
     protocol: TCP
   selector:
-    app: {{ template "cadvisor.name" . }}
+    {{- include "cadvisor.selectorLabels" . | nindent 4 }}
   type: ClusterIP

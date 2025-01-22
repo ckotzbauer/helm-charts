@@ -4,6 +4,8 @@ kind: ClusterRole
 metadata:
   name: {{ template "cadvisor.name" . }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "cadvisor.labels" . | nindent 4}}
 rules:
   - apiGroups: ['policy']
     resources: ['podsecuritypolicies']

@@ -5,10 +5,7 @@ metadata:
   name: {{ template "cadvisor.name" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ template "cadvisor.name" . }}
-    chart: {{ template "cadvisor.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "cadvisor.labels" . | nindent 4}}
 spec:
   selector:
     matchLabels:
@@ -30,3 +27,4 @@ spec:
         {{- toYaml .Values.metrics.metricRelabelings | nindent 8 }}
       {{- end -}}
 {{- end -}}
+

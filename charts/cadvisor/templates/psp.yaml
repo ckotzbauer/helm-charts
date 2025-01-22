@@ -4,6 +4,8 @@ kind: PodSecurityPolicy
 metadata:
   name: {{ template "cadvisor.name" . }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "cadvisor.labels" . | nindent 4}}
 spec:
   seLinux:
     rule: RunAsAny
