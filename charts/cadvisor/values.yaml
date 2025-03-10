@@ -35,6 +35,10 @@ container:
       path: "/dev/disk"
       readOnly: true
 
+service:
+  type: ClusterIP
+  nodePort:  # If type is NodePort, specify the nodePort value. (30000-32767)
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
