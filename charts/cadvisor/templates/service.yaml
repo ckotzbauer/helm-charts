@@ -11,6 +11,9 @@ spec:
     port: {{ .Values.container.port }}
     targetPort: {{ .Values.container.port }}
     protocol: TCP
+    {{- with .Values.service.nodePort }}
+    nodePort: {{ . }}
+    {{- end }}
   selector:
     {{- include "cadvisor.selectorLabels" . | nindent 4 }}
-  type: ClusterIP
+  type: {{ .Values.service.type }}
