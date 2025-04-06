@@ -8,20 +8,15 @@ metadata:
 {{ toYaml . | indent 4 }}
   {{- end }}
   labels:
-    app: {{ template "cadvisor.name" . }}
-    chart: {{ template "cadvisor.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "cadvisor.labels" . | nindent 4}}
 spec:
   selector:
     matchLabels:
-      app: {{ template "cadvisor.name" . }}
-      release: {{ .Release.Name }}
+      {{- include "cadvisor.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: {{ template "cadvisor.name" . }}
-        release: {{ .Release.Name }}
+        {{- include "cadvisor.selectorLabels" . | nindent 8 }}
         {{- range $key, $value := .Values.podLabels }}
         {{ $key }}: {{ $value | quote }}
         {{- end }}
@@ -30,17 +25,17 @@ spec:
         {{ $key }}: {{ $value | quote }}
         {{- end }}
     spec:
-      {{ if .Values.priorityClassName }}
+      {{- if .Values.priorityClassName }}
       priorityClassName: {{ .Values.priorityClassName }}
       {{- end }}
-      {{ if .Values.image.pullSecrets }}
+      {{- if .Values.image.pullSecrets }}
       imagePullSecrets:
       {{- range .Values.image.pullSecrets }}
       - name: {{ . }}
       {{- end }}
       {{- end }}
       serviceAccountName: {{ template "cadvisor.serviceAccountName" . }}
-      {{ if .Values.hostNetwork }} 
+      {{- if .Values.hostNetwork }} 
       hostNetwork: true
       {{- end }}
       containers:
@@ -57,7 +52,7 @@ spec:
           mountPath: {{ default .path .mount }}
           readOnly: {{ list nil true | has .readOnly }}
         {{- end }}
-        {{ if .Values.podSecurityContext.create }}
+        {{- if .Values.podSecurityContext.create }}
         securityContext:
           privileged: {{ .Values.podSecurityContext.privileged }}
         {{- end }}
