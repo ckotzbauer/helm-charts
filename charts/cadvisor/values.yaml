@@ -53,6 +53,7 @@ resources: {}
 
 podAnnotations: {}
 podLabels: {}
+commonLabels: {}
 
 daemonsetAnnotations:
   seccomp.security.alpha.kubernetes.io/pod: 'docker/default'

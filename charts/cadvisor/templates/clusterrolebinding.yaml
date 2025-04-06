@@ -4,6 +4,8 @@ kind: ClusterRoleBinding
 metadata:
   name: {{ template "cadvisor.name" . }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "cadvisor.labels" . | nindent 4}}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
