@@ -426,7 +426,7 @@ configConnectionPooler:
   # db user for pooler to use
   connection_pooler_user: "pooler"
   # docker image
-  connection_pooler_image: "registry.opensource.zalan.do/acid/pgbouncer:master-32"
+  connection_pooler_image: "registry.opensource.zalan.do/acid/pgbouncer:master-32@sha256:e842e2a717ceb1f7a7edcb021c98fc4b5882a8615e2dfacdca781a17abc90c47"
   # max db connections the pooler should hold
   connection_pooler_max_db_connections: 60
   # default pooling mode
