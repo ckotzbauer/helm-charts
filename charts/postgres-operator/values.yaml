@@ -1,7 +1,7 @@
 image:
   registry: registry.opensource.zalan.do
   repository: acid/postgres-operator
-  tag: v1.11.0
+  tag: v1.11.0@sha256:20ba5dbb3f2d3566eddb4cd0616379cc73e55bacce398301e577d4f6353ad4e9
   pullPolicy: "IfNotPresent"
 
 # Optionally specify an array of imagePullSecrets.
@@ -36,7 +36,7 @@ configGeneral:
   # etcd connection string for Patroni. Empty uses K8s-native DCS.
   etcd_host: ""
   # Spilo docker image
-  docker_image: ghcr.io/zalando/spilo-16:3.2-p3
+  docker_image: ghcr.io/zalando/spilo-16:3.2-p3@sha256:b59493aaba6e35c017f22954fa09548060616c8669c58ab2b368689f0ee21884
 
   # key name for annotation to ignore globally configured instance limits
   # ignore_instance_limits_annotation_key: ""
@@ -356,7 +356,7 @@ configLogicalBackup:
   # logical_backup_memory_request: ""
 
   # image for pods of the logical backup job (example runs pg_dumpall)
-  logical_backup_docker_image: "registry.opensource.zalan.do/acid/logical-backup:v1.12.0"
+  logical_backup_docker_image: "registry.opensource.zalan.do/acid/logical-backup:v1.12.0@sha256:ffdc59181320c713a9a7feb2c2a65c5df0ffb93223a17a9cb4dad486ee11b83c"
   # path of google cloud service account json file
   # logical_backup_google_application_credentials: ""
 
