@@ -29,7 +29,7 @@ webserver:
   image:
     repository: nginxinc/nginx-unprivileged
     pullPolicy: IfNotPresent
-    tag: mainline-alpine
+    tag: mainline-alpine@sha256:e93571f3d08325964770168617743bcce2d308255ded81e38172fb1803407e74
 
   service:
     type: ClusterIP
@@ -75,7 +75,7 @@ job:
     repository: ghcr.io/ckotzbauer/chekr
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: ""
+    tag: "@sha256:f299baf467b53235002edfc1cba746f7c403667f8a3be2d841c161094708862e"
 
   schedule: "0 22 * * *"
   commands: []
