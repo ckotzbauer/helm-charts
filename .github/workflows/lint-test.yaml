@@ -19,7 +19,7 @@ jobs:
         uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3.5
 
       - name: Setup Python
-        uses: ckotzbauer/actions-toolkit/setup-python@ec37c041a36a69320d9cb6a4c41c89f84f7e02cd # 0.55.1
+        uses: ckotzbauer/actions-toolkit/setup-python@203116543badcfcd7abcca662aced7ffcaf438d4 # 0.55.4
 
       - name: Set up chart-testing
         uses: helm/chart-testing-action@6ec842c01de15ebb84c8627d2744a0c2f2755c9f # v2.8.0
