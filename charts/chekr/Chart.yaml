@@ -2,7 +2,7 @@ apiVersion: v2
 name: chekr
 description: A inspection utility for the maintenance of Kubernetes clusters.
 type: application
-version: 0.5.2
+version: 0.5.3
 appVersion: 0.5.1
 home: https://github.com/ckotzbauer/chekr
 sources:
