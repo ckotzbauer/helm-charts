@@ -3,6 +3,27 @@ entries:
   access-manager:
   - apiVersion: v1
     appVersion: 0.13.0
+    created: "2026-03-16T19:58:24.240226918Z"
+    description: Kubernetes-Operator to simplify RBAC configurations
+    digest: f6c076ec1f87dc48079254bc2e14bfb2d93f698fbdbd857d55a23e2de4c8aca9
+    home: https://github.com/ckotzbauer/access-manager
+    keywords:
+    - kubernetes-operator
+    - operator
+    - rbac
+    - secret
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: access-manager
+    sources:
+    - https://github.com/ckotzbauer/access-manager
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/access-manager-0.14.3/access-manager-0.14.3.tgz
+    version: 0.14.3
+  - apiVersion: v1
+    appVersion: 0.13.0
     created: "2024-04-20T08:24:28.574957379Z"
     description: Kubernetes-Operator to simplify RBAC configurations
     digest: c5a8282ec76c6672883e2185c5d5c58a59ee2a93d7faf66955c1a771fad2ba9c
@@ -438,6 +459,26 @@ entries:
     - https://github.com/ckotzbauer/helm-charts/releases/download/access-manager-0.1.0/access-manager-0.1.0.tgz
     version: 0.1.0
   cadvisor:
+  - apiVersion: v1
+    appVersion: 0.52.1
+    created: "2026-03-16T19:58:24.397048228Z"
+    description: A chart for a Cadvisor deployment
+    digest: a552ed12f632cf396a8e1ebfe9374d4302b37ff1eae1234675dfe95a4651cbb0
+    home: https://github.com/google/cadvisor
+    keywords:
+    - prometheus
+    - cadvisor
+    - monitoring
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: cadvisor
+    sources:
+    - https://github.com/google/cadvisor
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/cadvisor-2.4.3/cadvisor-2.4.3.tgz
+    version: 2.4.3
   - apiVersion: v1
     appVersion: 0.52.1
     created: "2025-05-01T12:47:26.93864174Z"
@@ -981,6 +1022,29 @@ entries:
   chekr:
   - apiVersion: v2
     appVersion: 0.5.1
+    created: "2026-03-16T19:58:24.51062756Z"
+    description: A inspection utility for the maintenance of Kubernetes clusters.
+    digest: a835216172e30e28863485ad9164b48a727cb6dc105a7a28078aad2df60e38d4
+    home: https://github.com/ckotzbauer/chekr
+    keywords:
+    - prometheus
+    - kubernetes
+    - cli
+    - maintenance
+    - clusters
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: chekr
+    sources:
+    - https://github.com/ckotzbauer/chekr
+    - https://github.com/ckotzbauer/helm-charts
+    type: application
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/chekr-0.5.3/chekr-0.5.3.tgz
+    version: 0.5.3
+  - apiVersion: v2
+    appVersion: 0.5.1
     created: "2021-12-10T10:25:48.110048409Z"
     description: A inspection utility for the maintenance of Kubernetes clusters.
     digest: 4128d77350eae12e2de76005e9f7abb46b20349d8810c737c2b5f530299f4f67
@@ -1026,6 +1090,29 @@ entries:
     - https://github.com/ckotzbauer/helm-charts/releases/download/chekr-0.5.0/chekr-0.5.0.tgz
     version: 0.5.0
   postgres-operator:
+  - apiVersion: v2
+    appVersion: 1.12.0
+    created: "2026-03-16T19:58:24.664908058Z"
+    description: Postgres Operator creates and manages PostgreSQL clusters running
+      in Kubernetes
+    digest: 4e89657c8ae7954586ca71ab1e1080d91d362188da9fa677ae7291b0ebea6649
+    home: https://github.com/zalando/postgres-operator
+    keywords:
+    - postgres
+    - operator
+    - cloud-native
+    - patroni
+    - spilo
+    maintainers:
+    - email: christian.kotzbauer@gmail.com
+      name: ckotzbauer
+    name: postgres-operator
+    sources:
+    - https://github.com/zalando/postgres-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/postgres-operator-1.12.2/postgres-operator-1.12.2.tgz
+    version: 1.12.2
   - apiVersion: v2
     appVersion: 1.12.0
     created: "2024-06-01T08:08:54.004964222Z"
@@ -1257,6 +1344,30 @@ entries:
     - https://github.com/ckotzbauer/helm-charts/releases/download/postgres-operator-1.6.3/postgres-operator-1.6.3.tgz
     version: 1.6.3
   sbom-operator:
+  - apiVersion: v2
+    appVersion: 0.41.0
+    created: "2026-03-16T19:58:24.790159355Z"
+    description: Catalogue all images of a Kubernetes cluster to multiple targets
+      with Syft
+    digest: 33a78b3a67fce909a4fbb24e0698f6bb63ced3a88078f989e575d560daaea264
+    home: https://github.com/ckotzbauer/sbom-operator
+    keywords:
+    - kubernetes-operator
+    - operator
+    - sbom
+    - syft
+    - git
+    - supply-chain-security
+    maintainers:
+    - email: git@ckotzbauer.de
+      name: ckotzbauer
+    name: sbom-operator
+    sources:
+    - https://github.com/ckotzbauer/sbom-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/sbom-operator-0.42.1/sbom-operator-0.42.1.tgz
+    version: 0.42.1
   - apiVersion: v2
     appVersion: 0.40.0
     created: "2025-12-06T16:36:46.330967894Z"
@@ -2623,6 +2734,30 @@ entries:
   vulnerability-operator:
   - apiVersion: v2
     appVersion: 0.27.0
+    created: "2026-03-16T19:58:24.915895316Z"
+    description: Scans SBOMs for vulnerabilities
+    digest: 843f7d02bb7a20562c0f1805f6b524e3f197ce9106f7551f572bfcc1119460ba
+    home: https://github.com/ckotzbauer/vulnerability-operator
+    keywords:
+    - kubernetes-operator
+    - operator
+    - sbom
+    - grype
+    - vulnerability
+    - security
+    - supply-chain-security
+    maintainers:
+    - email: git@ckotzbauer.de
+      name: ckotzbauer
+    name: vulnerability-operator
+    sources:
+    - https://github.com/ckotzbauer/vulnerability-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.29.2/vulnerability-operator-0.29.2.tgz
+    version: 0.29.2
+  - apiVersion: v2
+    appVersion: 0.27.0
     created: "2025-04-06T09:13:50.339645095Z"
     description: Scans SBOMs for vulnerabilities
     digest: 7d4a25e474509192abd676093a721864dd64fa6d471cac1281052ab1cf7e36e2
@@ -3701,4 +3836,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.1.0/vulnerability-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-06T16:36:46.33125603Z"
+generated: "2026-03-16T19:58:24.916603437Z"
