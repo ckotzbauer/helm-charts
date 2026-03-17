@@ -1,0 +1,124 @@
+name: Bump Chart Version
+
+on:
+  workflow_call:
+    inputs:
+      chart:
+        description: "Name of the chart (e.g. vulnerability-operator)"
+        required: true
+        type: string
+      app-version:
+        description: "New appVersion (e.g. 0.29.0)"
+        required: true
+        type: string
+      image-digest:
+        description: "New image digest (e.g. sha256:abc123...)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout helm-charts
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          repository: ckotzbauer/helm-charts
+          token: ${{ secrets.CR_TOKEN }}
+
+      - name: Calculate new chart version
+        id: version
+        run: |
+          CHART_DIR="charts/${{ inputs.chart }}"
+
+          if [ ! -f "${CHART_DIR}/Chart.yaml" ]; then
+            echo "::error::Chart '${CHART_DIR}' not found"
+            exit 1
+          fi
+
+          CURRENT_CHART_VERSION=$(grep '^version:' "${CHART_DIR}/Chart.yaml" | awk '{print $2}')
+          CURRENT_APP_VERSION=$(grep '^appVersion:' "${CHART_DIR}/Chart.yaml" | awk '{print $2}')
+          NEW_APP_VERSION="${{ inputs.app-version }}"
+
+          echo "Current chart version: ${CURRENT_CHART_VERSION}"
+          echo "Current app version: ${CURRENT_APP_VERSION}"
+          echo "New app version: ${NEW_APP_VERSION}"
+
+          # Parse current appVersion
+          OLD_MAJOR=$(echo "${CURRENT_APP_VERSION}" | cut -d. -f1)
+          OLD_MINOR=$(echo "${CURRENT_APP_VERSION}" | cut -d. -f2)
+
+          # Parse new appVersion
+          NEW_MAJOR=$(echo "${NEW_APP_VERSION}" | cut -d. -f1)
+          NEW_MINOR=$(echo "${NEW_APP_VERSION}" | cut -d. -f2)
+
+          # Parse current chart version
+          CHART_MAJOR=$(echo "${CURRENT_CHART_VERSION}" | cut -d. -f1)
+          CHART_MINOR=$(echo "${CURRENT_CHART_VERSION}" | cut -d. -f2)
+          CHART_PATCH=$(echo "${CURRENT_CHART_VERSION}" | cut -d. -f3)
+
+          # Determine bump type: minor if appVersion major or minor changed, patch otherwise
+          if [ "${NEW_MAJOR}" != "${OLD_MAJOR}" ] || [ "${NEW_MINOR}" != "${OLD_MINOR}" ]; then
+            NEW_CHART_VERSION="${CHART_MAJOR}.$((CHART_MINOR + 1)).0"
+            echo "Minor appVersion bump detected -> minor chart version bump"
+          else
+            NEW_CHART_VERSION="${CHART_MAJOR}.${CHART_MINOR}.$((CHART_PATCH + 1))"
+            echo "Patch appVersion bump detected -> patch chart version bump"
+          fi
+
+          echo "New chart version: ${NEW_CHART_VERSION}"
+          echo "chart-dir=${CHART_DIR}" >> "$GITHUB_OUTPUT"
+          echo "new-chart-version=${NEW_CHART_VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Update Chart.yaml
+        run: |
+          CHART_DIR="${{ steps.version.outputs.chart-dir }}"
+          sed -i "s/^version:.*/version: ${{ steps.version.outputs.new-chart-version }}/" "${CHART_DIR}/Chart.yaml"
+          sed -i "s/^appVersion:.*/appVersion: ${{ inputs.app-version }}/" "${CHART_DIR}/Chart.yaml"
+
+      - name: Update values.yaml image digest
+        run: |
+          CHART_DIR="${{ steps.version.outputs.chart-dir }}"
+          DIGEST="${{ inputs.image-digest }}"
+
+          # Normalize: ensure digest has sha256: prefix but no @ prefix
+          DIGEST="${DIGEST#@}"
+          DIGEST="${DIGEST#sha256:}"
+          DIGEST="sha256:${DIGEST}"
+
+          sed -i "s|tag:.*@sha256:.*|tag: \"@${DIGEST}\"|" "${CHART_DIR}/values.yaml"
+
+      - name: Update README.md image tag
+        run: |
+          CHART_DIR="${{ steps.version.outputs.chart-dir }}"
+
+          if [ -f "${CHART_DIR}/README.md" ]; then
+            sed -i "s/| \`image.tag\` .*/| \`image.tag\`                        | container image tag                                                       | \`${{ inputs.app-version }}\`                                    |/" "${CHART_DIR}/README.md"
+          fi
+
+      - name: Create Pull Request
+        id: create-pr
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7
+        with:
+          token: ${{ secrets.CR_TOKEN }}
+          commit-message: "feat: update ${{ inputs.chart }} to ${{ inputs.app-version }}"
+          branch: "bump/${{ inputs.chart }}-${{ inputs.app-version }}"
+          title: "feat: update ${{ inputs.chart }} to ${{ inputs.app-version }}"
+          body: |
+            Automated chart bump triggered by upstream release.
+
+            - **Chart:** ${{ inputs.chart }}
+            - **New appVersion:** ${{ inputs.app-version }}
+            - **New chart version:** ${{ steps.version.outputs.new-chart-version }}
+            - **Image digest:** `${{ inputs.image-digest }}`
+          labels: kind/dependencies
+
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pull-request-number
+        run: gh pr merge "${{ steps.create-pr.outputs.pull-request-number }}" --auto --merge
+        env:
+          GH_TOKEN: ${{ secrets.CR_TOKEN }}
