@@ -5,10 +5,34 @@
 
 ## Usage
 
+### Helm Repository
+
 Add the repo:
 
 ```
 helm repo add ckotzbauer https://ckotzbauer.github.io/helm-charts
+```
+
+Install a chart:
+
+```
+helm install my-release ckotzbauer/<chart-name>
+```
+
+### OCI Registry
+
+All charts are also available as OCI artifacts on `ghcr.io`. No `helm repo add` is needed.
+
+Install a chart directly:
+
+```
+helm install my-release oci://ghcr.io/ckotzbauer/helm-charts/<chart-name> --version <version>
+```
+
+Pull a chart locally:
+
+```
+helm pull oci://ghcr.io/ckotzbauer/helm-charts/<chart-name> --version <version>
 ```
 
 ## Charts
