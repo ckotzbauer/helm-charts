@@ -8,6 +8,7 @@ on:
 permissions:
   actions: read
   contents: write
+  packages: write
   pages: write
 
 jobs:
@@ -35,3 +36,38 @@ jobs:
         uses: helm/chart-releaser-action@cae68fefc6b5f367a0275617c9f83181ba54714f # v1.7.0
         env:
           CR_TOKEN: "${{ secrets.CR_TOKEN }}"
+
+  release-oci:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          fetch-depth: 0
+
+      - name: Install Helm
+        uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3.5
+
+      - name: Login to GHCR
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Package and push changed charts to OCI
+        run: |
+          for chart_dir in charts/*/; do
+            chart_name=$(basename "$chart_dir")
+            chart_version=$(grep '^version:' "$chart_dir/Chart.yaml" | awk '{print $2}')
+            oci_ref="oci://ghcr.io/${{ github.repository_owner }}/helm-charts/${chart_name}"
+
+            if helm pull "$oci_ref" --version "$chart_version" 2>/dev/null; then
+              echo "Skipping $chart_name:$chart_version (already exists)"
+              rm -f "${chart_name}-${chart_version}.tgz"
+            else
+              echo "Packaging and pushing $chart_name:$chart_version"
+              helm package "$chart_dir"
+              helm push "${chart_name}-${chart_version}.tgz" "oci://ghcr.io/${{ github.repository_owner }}/helm-charts"
+              rm -f "${chart_name}-${chart_version}.tgz"
+            fi
+          done
