@@ -90,7 +90,7 @@ jobs:
           DIGEST="${DIGEST#sha256:}"
           DIGEST="sha256:${DIGEST}"
 
-          sed -i "s|tag:.*@sha256:.*|tag: \"@${DIGEST}\"|" "${CHART_DIR}/values.yaml"
+          sed -i "s|tag:.*@sha256:.*|tag: \"${{ inputs.app-version }}@${DIGEST}\"|" "${CHART_DIR}/values.yaml"
 
       - name: Update README.md image tag
         run: |
