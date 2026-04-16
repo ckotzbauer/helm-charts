@@ -1345,6 +1345,30 @@ entries:
     version: 1.6.3
   sbom-operator:
   - apiVersion: v2
+    appVersion: 0.42.0
+    created: "2026-04-16T19:02:13.536960888Z"
+    description: Catalogue all images of a Kubernetes cluster to multiple targets
+      with Syft
+    digest: 95dad5583be55680274e4887c04b8008e990c3b35c9e3c3db24e833cb53d31d1
+    home: https://github.com/ckotzbauer/sbom-operator
+    keywords:
+    - kubernetes-operator
+    - operator
+    - sbom
+    - syft
+    - git
+    - supply-chain-security
+    maintainers:
+    - email: git@ckotzbauer.de
+      name: ckotzbauer
+    name: sbom-operator
+    sources:
+    - https://github.com/ckotzbauer/sbom-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/sbom-operator-0.43.0/sbom-operator-0.43.0.tgz
+    version: 0.43.0
+  - apiVersion: v2
     appVersion: 0.41.5
     created: "2026-04-15T19:02:12.057874178Z"
     description: Catalogue all images of a Kubernetes cluster to multiple targets
@@ -4076,4 +4100,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.1.0/vulnerability-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-16T05:22:28.093991728Z"
+generated: "2026-04-16T19:02:13.537416142Z"
