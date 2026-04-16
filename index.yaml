@@ -2853,6 +2853,30 @@ entries:
     version: 0.1.0
   vulnerability-operator:
   - apiVersion: v2
+    appVersion: 0.28.4
+    created: "2026-04-16T05:22:28.09350571Z"
+    description: Scans SBOMs for vulnerabilities
+    digest: 95dc292b7084fbeb941774d963c2f7a65480c56ca40392d2c2a492b293567321
+    home: https://github.com/ckotzbauer/vulnerability-operator
+    keywords:
+    - kubernetes-operator
+    - operator
+    - sbom
+    - grype
+    - vulnerability
+    - security
+    - supply-chain-security
+    maintainers:
+    - email: git@ckotzbauer.de
+      name: ckotzbauer
+    name: vulnerability-operator
+    sources:
+    - https://github.com/ckotzbauer/vulnerability-operator
+    - https://github.com/ckotzbauer/helm-charts
+    urls:
+    - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.31.3/vulnerability-operator-0.31.3.tgz
+    version: 0.31.3
+  - apiVersion: v2
     appVersion: 0.28.3
     created: "2026-04-08T18:26:36.865246905Z"
     description: Scans SBOMs for vulnerabilities
@@ -4052,4 +4076,4 @@ entries:
     urls:
     - https://github.com/ckotzbauer/helm-charts/releases/download/vulnerability-operator-0.1.0/vulnerability-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-15T19:02:12.058239302Z"
+generated: "2026-04-16T05:22:28.093991728Z"
