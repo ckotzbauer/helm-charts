@@ -21,7 +21,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@28f2168f4d98ee0445e3c6321f6e6616c83dd5ec
         with:
-          python-version: '3.13'
+          python-version: '3.14'
 
       - name: Set up chart-testing
         uses: helm/chart-testing-action@6ec842c01de15ebb84c8627d2744a0c2f2755c9f # v2.8.0
