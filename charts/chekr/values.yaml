@@ -29,7 +29,7 @@ webserver:
   image:
     repository: nginxinc/nginx-unprivileged
     pullPolicy: IfNotPresent
-    tag: mainline-alpine@sha256:e93571f3d08325964770168617743bcce2d308255ded81e38172fb1803407e74
+    tag: mainline-alpine@sha256:ede1d5af209ef9d29c902e0775ae850ce231d810a6980b1762f81110e757aa96
 
   service:
     type: ClusterIP
