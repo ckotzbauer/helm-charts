@@ -1,7 +1,7 @@
 apiVersion: v2
 description: Catalogue all images of a Kubernetes cluster to multiple targets with Syft
 name: sbom-operator
-version: 0.43.4
+version: 0.43.5
 appVersion: 0.42.4
 home: https://github.com/ckotzbauer/sbom-operator
 sources:
