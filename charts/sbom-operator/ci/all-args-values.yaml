@@ -1,5 +1,6 @@
 args:
-  format: json
+  format: cyclonedxjson
+  format-version: "1.7"
   verbosity: debug
   cron: "@hourly"
   targets: git
