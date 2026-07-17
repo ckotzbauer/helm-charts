@@ -1,6 +1,8 @@
 envVars:
   - name: SBOM_FORMAT
-    value: json
+    value: cyclonedxjson
+  - name: SBOM_FORMAT_VERSION
+    value: "1.7"
   - name: SBOM_VERBOSITY
     value: debug
   - name: SBOM_CRON
