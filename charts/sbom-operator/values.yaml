@@ -4,7 +4,7 @@
 
 image:
   repository: ghcr.io/ckotzbauer/sbom-operator
-  tag: "0.44.4@sha256:572386257719175899ada540d934ecc0d71c90dbe980386531f52a01b93ddb4a"
+  tag: "0.44.5@sha256:a549a03e80e32166888612ef8f249c7d845e3589e3414f6ba5e4830e8024751b"
   pullPolicy: IfNotPresent
   pullSecrets: []
 
