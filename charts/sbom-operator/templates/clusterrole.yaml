@@ -12,6 +12,7 @@ rules:
   - namespaces
   verbs:
   - list
+  - watch
 - apiGroups:
   - ""
   resources:
@@ -36,12 +37,6 @@ rules:
   verbs:
   - get
   - update
-- apiGroups:
-  - ""
-  resources:
-  - pods
-  verbs:
-  - watch
 {{- if .Values.jobImageMode }}
 - apiGroups:
   - ""
